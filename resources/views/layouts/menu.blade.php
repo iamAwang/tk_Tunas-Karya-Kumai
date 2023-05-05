@@ -4,7 +4,7 @@
         <i class="nav-icon fas fa-home"></i>
         <p>Home</p>
     </a>
-    @auth
+    {{-- @auth
         @php
             $menus = Auth::user()->role->role_feature;
         @endphp
@@ -14,5 +14,20 @@
                 <p>{{$menu->feature->name}}</p>
             </a>
         @endforeach
-    @endauth
+    @endauth --}}
+
+    <a href="{{ route('Developer') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-code"></i>
+        <p>Developer</p>
+    </a>
+
+    <a href="{{ route('indexPegawai') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-user-tie"></i>
+        <p>Data Pegawai</p>
+    </a>
+
+    <a href="{{ route('indexSiswa') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-users"></i>
+        <p>Data Siswa</p>
+    </a>
 </li>
