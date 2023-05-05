@@ -10,7 +10,7 @@ class Siswa extends Model
     protected $table='siswas';
     protected $fillable=['nama_siswa','tempat_lahir_siswa','tanggal_lahir_siswa','alamat_siswa','nama_orangtua','no_handphone_orangtua','kelas','id_pegawai'];
 
-    public function pegawai(){
-        return $this->belongsTo(Pegawai::class);
+    public function pegawais(){
+        return $this->belongsTo(Pegawai::class,'id_pegawai');
     }
 }

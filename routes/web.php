@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\SekolahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Auth::routes();
 Route::get('/developer',[DeveloperController::class,'index'])->name('Developer');
 Route::get('/developer/create',[DeveloperController::class,'create']);
 Route::post('/developer/store',[DeveloperController::class,'store']);
+
+Route::get('/sekolah',[SekolahController::class,'index'])->name('indexSekolah');
 
 Route::get('/pegawai',[PegawaiController::class,'index'])->name('indexPegawai');
 Route::get('/create-pegawai',[PegawaiController::class, 'create'])->name('createPegawai');

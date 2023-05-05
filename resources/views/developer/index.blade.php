@@ -1,17 +1,14 @@
 @extends('layouts.app')
 
 @section('header')
-<h5>
-    ROLE Management
-</h5>
+<div class="container-fluid">
+    <h1 class="text-black-50" style="text-align: center">ROLE MANAGEMENT</h1>
+</div>
 @endsection
 @section('content')
 <div class="container-fluid">
     <div class="row">
-
-    </div>
-    <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="margin-left: auto; margin-right: auto;">
             <div class="card">
 
                 <div class="card-body">

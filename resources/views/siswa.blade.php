@@ -38,7 +38,7 @@
                     <td>{{$siswa->nama_orangtua}}</td>
                     <td>{{$siswa->no_handphone_orangtua}}</td>
                     <td>{{$siswa->kelas}}</td>
-                    <td>{{$siswa->id_pegawai}}</td>
+                    <td>{{$siswa->pegawais->nama_pegawai}}</td>
                     <td>
                         <button type="button" class="btn btn-block btn-warning">
                             <a href="{{route('editSiswa',$siswa->id)}}" style="text-decoration: none; color:white">

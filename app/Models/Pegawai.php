@@ -9,4 +9,8 @@ class Pegawai extends Model
 {
     protected $table='pegawais';
     protected $fillable=['nama_pegawai','tempat_lahir_pegawai','tanggal_lahir_pegawai','alamat_pegawai','jabatan'];
+
+    public function siswas(){
+        return $this->hasMany(Siswa::class,'id','id_pegawai');
+    }
 }

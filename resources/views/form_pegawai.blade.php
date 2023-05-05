@@ -36,6 +36,7 @@
                     placeholder="Tanggal Lahir"
                     name="tanggal_lahir_pegawai"
                     value="<?php if(@$edit!=null) printf($edit->tanggal_lahir_pegawai)?>"
+                    onfocus="this.ShowPicker()"
                 />
             </div>
             <div class="form-group">
