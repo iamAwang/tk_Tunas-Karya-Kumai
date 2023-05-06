@@ -1,3 +1,9 @@
+@extends('layouts.app') @section('header')
+<div class="container-fluid">
+    <h1 class="text-black-50" style="text-align: center">DATA PEGAWAI</h1>
+</div>
+@endsection
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
