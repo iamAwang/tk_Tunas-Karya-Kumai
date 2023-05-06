@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('alamat_pegawai');
             $table->string('jabatan');
             $table->string('foto_profil');
+            $table->string('foto_sertifikat');
             $table->timestamps();
         });
     }

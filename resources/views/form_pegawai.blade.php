@@ -61,8 +61,13 @@
             </div>
             
             <div class="form-group">
-            <label>Upload Foto</label>
-            <input type="file" name="foto_profil" class="form-control">
+                <label>Upload Foto</label>
+                <input type="file" name="foto_profil" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Upload Sertifikat</label>
+                <input type="file" name="foto_sertifikat" class="form-control" multiple>
             </div>
         </div>
 

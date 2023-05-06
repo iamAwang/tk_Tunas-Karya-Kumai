@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pegawai extends Model
 {
     protected $table='pegawais';
-    protected $fillable=['nama_pegawai','tempat_lahir_pegawai','tanggal_lahir_pegawai','alamat_pegawai','jabatan','foto_profil'];
+    protected $fillable=['nama_pegawai','tempat_lahir_pegawai','tanggal_lahir_pegawai','alamat_pegawai','jabatan','foto_profil','foto_sertifikat'];
 
     public function siswas(){
         return $this->hasMany(Siswa::class,'id','id_pegawai');

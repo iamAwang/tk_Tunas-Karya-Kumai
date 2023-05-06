@@ -19,6 +19,7 @@
                     <th>Alamat</th>
                     <th>Jabatan</th>
                     <th>Foto</th>
+                    <th>Sertifikat</th>
                     <th colspan="2">Aksi</th>
                 </tr>
             </thead>
@@ -36,6 +37,9 @@
                     <td>{{$pegawai->jabatan}}</td>
                     <td>
                         <img height="100" width="150" src="{{asset('storage/photos')}}/{{$pegawai->foto_profil}}" >
+                    </td>
+                    <td>
+                        <img height="100" width="150" src="{{asset('storage/docs')}}/{{$pegawai->foto_sertifikat}}" >
                     </td>
                     <td>
                         <button type="button" class="btn btn-block btn-warning">
