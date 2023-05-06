@@ -5,7 +5,7 @@
         <h3 class="card-title">Tambah Pegawai</h3>
     </div>
 
-    <form action="<?php @$edit!=null? printf(route('updatePegawai',[$edit->id])) : printf(route('storePegawai'))?>" method="POST">
+    <form action="<?php @$edit!=null? printf(route('updatePegawai',[$edit->id])) : printf(route('storePegawai'))?>" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             <div class="form-group">
@@ -58,6 +58,11 @@
                     name="jabatan"
                     value="<?php if(@$edit!=null) printf($edit->jabatan)?>"
                 />
+            </div>
+            
+            <div class="form-group">
+            <label>Upload Foto</label>
+            <input type="file" name="foto_profil" class="form-control">
             </div>
         </div>
 

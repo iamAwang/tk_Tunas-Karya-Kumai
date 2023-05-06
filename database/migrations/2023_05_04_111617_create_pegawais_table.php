@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tanggal_lahir_pegawai');
             $table->string('alamat_pegawai');
             $table->string('jabatan');
+            $table->string('foto_profil');
             $table->timestamps();
         });
     }
