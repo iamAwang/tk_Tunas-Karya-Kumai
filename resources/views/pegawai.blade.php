@@ -18,6 +18,8 @@
                     <th>Tanggal Lahir</th>
                     <th>Alamat</th>
                     <th>Jabatan</th>
+                    <th>Foto</th>
+                    <th>Sertifikat</th>
                     <th colspan="2">Aksi</th>
                 </tr>
             </thead>
@@ -34,6 +36,12 @@
                     <td>{{$pegawai->alamat_pegawai}}</td>
                     <td>{{$pegawai->jabatan}}</td>
                     <td>
+                        <img height="100" width="150" src="{{asset('storage/photos')}}/{{$pegawai->foto_profil}}" >
+                    </td>
+                    <td>
+                        <img height="100" width="150" src="{{asset('storage/docs')}}/{{$pegawai->foto_sertifikat}}" >
+                    </td>
+                    <td>
                         <button type="button" class="btn btn-block btn-warning">
                             <a href="{{route('editPegawai',$pegawai->id)}}" style="text-decoration: none; color:white">
                                 <i class="fas fa-pen"></i> Ubah
@@ -42,7 +50,8 @@
                     </td>
                     <td><form action="{{route('deletePegawai',@$pegawai->id)}}" method="POST" onsubmit="return confirm('Apakah anda yakin ingin menghapus pegawai ini?')">
                         @csrf
-                        <button type="submit" class="btn btn-block btn-danger"><i class="fas fa-trash"></i> Hapus</button></td>
+                        <button type="submit" class="btn btn-block btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                    </td>
                 </tr>
                 @php
                     $no++;

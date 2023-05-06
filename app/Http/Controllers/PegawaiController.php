@@ -20,12 +20,22 @@ class PegawaiController extends Controller
     }
 
     public function store(Request $request){
+        $file = $request->file('foto_profil');
+        $gambar = $file->hashName();
+        $file->store('photos','public');
+
+        $filee = $request->file('foto_sertifikat');
+        $sertif = $filee->hashName();
+        $filee->store('docs','public');
+
         Pegawai::create([
             'nama_pegawai'=>$request->nama_pegawai,
             'tempat_lahir_pegawai'=>$request->tempat_lahir_pegawai,
             'tanggal_lahir_pegawai'=>$request->tanggal_lahir_pegawai,
             'alamat_pegawai'=>$request->alamat_pegawai,
-            'jabatan'=>$request->jabatan
+            'jabatan'=>$request->jabatan,
+            'foto_profil'=>$gambar,
+            'foto_sertifikat'=>$sertif
         ]);
         return redirect('pegawai');
     }
