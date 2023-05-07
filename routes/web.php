@@ -5,6 +5,7 @@ use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SekolahController;
+use App\Http\Controllers\SertifikatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,6 @@ Route::post('/store-siswa',[SiswaController::class, 'store'])->name('storeSiswa'
 Route::get('/edit-siswa/{id}',[SiswaController::class, 'edit'])->name('editSiswa');
 Route::post('/update-siswa/{id}',[SiswaController::class, 'update'])->name('updateSiswa');
 Route::post('/delete-siswa/{id}',[SiswaController::class, 'delete'])->name('deleteSiswa');
+
+Route::get('/cerate-sertifikat',[SertifikatController::class, 'create'])->name('createSertifikat');
+Route::post('/store-sertifikat',[SertifikatController::class, 'store'])->name('storeSertifikat');
