@@ -69,3 +69,10 @@ h6 {
     font-size: inherit;
     font-weight: 400;
 }
+.home__slider{
+	width: 100%;
+	height: 50vh;
+}
+.slider img{
+	width: 100%;
+}

@@ -23,81 +23,69 @@
     <link rel="stylesheet" href="{{mix('css/new1.css')}}"> --}}
     <link href="{{ asset('css/new1.css') }}" rel="stylesheet">
     <link href="{{ asset('css/new.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <title>TK TUNAS KARYA KUMAI</title>
 </head>
 
 <body>
-
+    
 
     <div class="wrapper">
 
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a href="index.html" class="header__logo logo">
-                        <img src="{{asset("photo/all.jpg")}}" alt="logo" class="logo__img img">
+                    <div class="header__logo logo">
+                        <img src="{{ asset('photo/all.jpg') }}" alt="logo" class="logo__img img">
                         <span class="">Tk Tunas Karya</span>
-                    </a>
+                    </div>
                     <div class="header__body">
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="#home" class="menu__link">Home</a>
+                                    <a href="#home" class="menu__link">HOME</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#menu" class="menu__link">Our Menu</a>
+                                    <a href="#menu" class="menu__link">KURIKULUM</a>
                                 </li>
                                 <li class="menu__item">
-                                    @if (Route::has('login'))
-                                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                            @auth
-                                                <a href="{{ url('/home') }}"
-                                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                                            @else
-                                                <a href="{{ route('login') }}"
-                                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                                                @if (Route::has('register'))
-                                                    <a href="{{ route('register') }}"
-                                                        class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                                @endif
-                                            @endauth
-                                        </div>
-                                    @endif
+                                    <a href="#service" class="menu__link">PENDAFTARAN</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#service" class="menu__link">Our Services</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#contact" class="menu__link">Contact Us</a>
+                                    <a href="#contact" class="menu__link">CONTACT US</a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="header__search">
-                            <img src="{{asset("photo/all.jpg")}}" alt="search" class="search__img img">
-                        </div>
-                        <a href="#" class="header__basket">
-                            <img src="{{asset("photo/all.jpg")}}" alt="bag" class="basket__img img">
-                        </a>
-                        <div class="header__social">
-                            <ul class="social__list">
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <img src="img/icon/fb.svg" alt="social" class="social__img img">
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <img src="img/icon/tw.svg" alt="social" class="social__img img">
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <img src="img/icon/in.svg" alt="social" class="social__img img">
-                                    </a>
-                                </li>
+
+                        <div class="header__body">
+                            <nav class="menu">
+                            <ul class="menu__list">
+                                @if (Route::has('login'))
+                                    {{-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block"> --}}
+                                        @auth
+                                          <li class="menu__item">
+                                            <a href="{{ url('/home') }}"
+                                                class="menu__link">Home</a>
+                                          </li>
+                                        @else
+                                        <li class="menu__item">
+                                            <a href="{{ route('login') }}"
+                                                class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                                        </li>
+
+                                            @if (Route::has('register'))
+                                            <li class="menu__item">
+                                                <a href="{{ route('register') }}"
+                                                    class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                            </li>
+                                            @endif
+                                        @endauth
+                                    {{-- </div> --}}
+                                @endif
                             </ul>
+                            </nav>
                         </div>
                     </div>
 
@@ -110,32 +98,57 @@
 
         <main class="main">
             <section class="home" id="home">
+                {{-- <img src="{{ asset('photo/all.jpg') }}" class=""> --}}
                 <div class="container">
+
                     <div class="home__inner">
                         <div class="home__items">
-                            <h1 class="home__title">TK TUNAS KARYA<br> KUMAI</h1>
+                            <h1 class="home__title">TK KUMAI<br> taman kanak-kanak</h1>
                             <p class="home__subtitle text">ada berbagai kegiatan dan membuat anak anda nyaman belajar</p>
                            
                         </div>
-                        <div class="home__slider">
-                            <div class="home__image">
-                                <img src="img/1.png" alt="home img" class="home__img img">
-                            </div>
-                            <div class="home__image">
-                                <img src="img/1.png" alt="home img" class="home__img img">
-                            </div>
-                            <div class="home__image">
-                                <img src="img/1.png" alt="home img" class="home__img img">
-                            </div>
-                        </div>
+                       
                     </div>
+                    
                 </div>
+               
+
             </section>
+            <div class="card" style="width: 15rem; hight: 20cm">
+                <img src="{{ asset('photo/all.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
 
             <section class="our-menu" id="menu">
                 <div class="container our-menu__container">
-                    <h2 class="our-menu__title title">Sambutan Kepala Sekolah</h2>
-                    <img src="{{asset("photo/sambutan.jpg")}}" alt="logo" class="gambar_sambutan" style="width:50%;">
+                    <h2 class="our-menu__title title">Our menu</h2>
+                    <div class="our-menu__slider">
+                        <div class="our-menu__item">
+                            <div class="our-menu__image">
+                                <img src="img/s2.png" alt="" class="our-menu__img img">
+                            </div>
+                            <div class="our-menu__name">Ramen Egg Boil</div>
+                            <div class="our-menu__price">25$</div>
+                        </div>
+                        <div class="our-menu__item">
+                            <div class="our-menu__image">
+                                <img src="img/s1.png" alt="" class="our-menu__img img">
+                            </div>
+                            <div class="our-menu__name">Ramen noodles</div>
+                            <div class="our-menu__price">45$</div>
+                        </div>
+                        <div class="our-menu__item">
+                            <div class="our-menu__image">
+                                <img src="img/s3.png" alt="" class="our-menu__img img">
+                            </div>
+                            <div class="our-menu__name">Chicken Thukpa</div>
+                            <div class="our-menu__price">32$</div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -342,8 +355,10 @@
     {{-- <script src="{{mix('js/app.js')}}"></script> --}}
     {{-- <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script> --}}
-    <script type="text/javascript" src="{{ asset('js/new.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/new1.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('js/new.js') }}"></script> --}}
+    {{-- <script type="text/javascript" src="{{ asset('js/BBB.js') }}"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
