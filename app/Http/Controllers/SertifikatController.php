@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Sertifikat;
 use App\Models\Pegawai;
 
 class SertifikatController extends Controller
@@ -16,10 +17,9 @@ class SertifikatController extends Controller
         $sertif = $filee->hashName();
         $filee->store('docs','public');
 
-        Pegawai::create([
+        Pegawai::update([
             'foto_sertifikat'=>$sertif
         ]);
-        dd($request);
         return redirect('pegawai');
     }
 }

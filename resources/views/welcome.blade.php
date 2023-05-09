@@ -113,7 +113,7 @@
                 <div class="container">
                     <div class="home__inner">
                         <div class="home__items">
-                            <h1 class="home__title">TK KUMAI<br> taman kanak-kanak</h1>
+                            <h1 class="home__title">TK TUNAS KARYA<br> KUMAI</h1>
                             <p class="home__subtitle text">ada berbagai kegiatan dan membuat anak anda nyaman belajar</p>
                            
                         </div>
@@ -134,30 +134,8 @@
 
             <section class="our-menu" id="menu">
                 <div class="container our-menu__container">
-                    <h2 class="our-menu__title title">Our menu</h2>
-                    <div class="our-menu__slider">
-                        <div class="our-menu__item">
-                            <div class="our-menu__image">
-                                <img src="img/s2.png" alt="" class="our-menu__img img">
-                            </div>
-                            <div class="our-menu__name">Ramen Egg Boil</div>
-                            <div class="our-menu__price">25$</div>
-                        </div>
-                        <div class="our-menu__item">
-                            <div class="our-menu__image">
-                                <img src="img/s1.png" alt="" class="our-menu__img img">
-                            </div>
-                            <div class="our-menu__name">Ramen noodles</div>
-                            <div class="our-menu__price">45$</div>
-                        </div>
-                        <div class="our-menu__item">
-                            <div class="our-menu__image">
-                                <img src="img/s3.png" alt="" class="our-menu__img img">
-                            </div>
-                            <div class="our-menu__name">Chicken Thukpa</div>
-                            <div class="our-menu__price">32$</div>
-                        </div>
-                    </div>
+                    <h2 class="our-menu__title title">Sambutan Kepala Sekolah</h2>
+                    <img src="{{asset("photo/sambutan.jpg")}}" alt="logo" class="gambar_sambutan" style="width:50%;">
                 </div>
             </section>
 
