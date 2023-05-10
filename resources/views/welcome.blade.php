@@ -125,11 +125,11 @@
 
             <section class="our-menu" id="menu">
                 <div class="container our-menu__container">
-                    <h2 class="our-menu__title title">Our menu</h2>
+                    <h2 class="our-menu__title title">KURIKULUM</h2>
                     <div class="our-menu__slider">
                         <div class="our-menu__item">
                             <div class="our-menu__image">
-                                <img src="img/s2.png" alt="" class="our-menu__img img">
+                                <img src="photo/sambutan.jpg" alt="" class="our-menu__img img">
                             </div>
                             <div class="our-menu__name">Ramen Egg Boil</div>
                             <div class="our-menu__price">25$</div>
