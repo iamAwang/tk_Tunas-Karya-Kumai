@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Tk Tunas karya</title>
+    <title>Tk Kumai</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{asset("photo/ppp.png")}}" rel="icon">
+    <link href="{{asset("photo/ppp.png")}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,21 +45,21 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <a href="#" class="logo d-flex align-items-center me-auto me-lg-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>Yummy<span>.</span></h1>
+                 <img src="{{asset("photo/ppp.png")}}" alt=""> 
+                <h1>Tk Tunas Karya Kumai<span>.</span></h1>
             </a>
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#chefs">Chefs</a></li>
+                    <li><a href="#about">Visi Misi</a></li>
+                    <li><a href="#menu">Pendaftaran</a></li>
+                    <li><a href="#events">Fasilitas</a></li>
+                    <li><a href="#chefs">Guru</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i
+                    {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             <li><a href="#">Drop Down 1</a></li>
@@ -77,12 +77,24 @@
                             <li><a href="#">Drop Down 3</a></li>
                             <li><a href="#">Drop Down 4</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
-            <a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
+            @if (Route::has('login'))
+            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                @auth
+                    <a href="{{ url('/home') }}" class="btn-book-a-table" style="background-color: #FFB4B4">Home</a>
+                @else
+                    <a href="{{ route('login') }}" class="btn-book-a-table">Log in</a>
+{{-- 
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn-book-a-table">Register</a>
+                    @endif --}}
+                @endauth
+            </div>
+        @endif
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -90,43 +102,52 @@
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center section-bg">
+    <section id="hero" class="hero d-flex align-items-center section-bg" style="background-color: #FFB4B4">
         <div class="container">
             <div class="row justify-content-between gy-5">
                 <div
                     class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-                    <h2 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea
-                        consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                    <h2 data-aos="fade-up">Salam<br>Literasi</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Selamat datang di Yayasan kami , yayassan kami membantuk anak anda menjadi yang terhebat di masa</p>
                     <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                       
                         <a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                        {{-- <video >
+                            <source src="{{asset("photo/kepalasekolah.mp4")}}" class="glightbox btn-watch-video d-flex align-items-center" type="video/mp4">
+                                <i class="bi bi-play-circle"></i><span>Watch Video</span>
+                        </video> --}}
+                        <a href="{{asset("photo/kepalasekolah.mp4")}}"
                             class="glightbox btn-watch-video d-flex align-items-center"><i
                                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
+                    {{-- <video class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <source src="{{asset("photo/kepalasekolah.mp4")}}" class="glightbox btn-watch-video d-flex align-items-center" type="video/mp4">
+                            <i class="bi bi-play-circle"></i><span>Watch Video</span>
+                    </video> --}}
                 </div>
                 <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-                    <img src="{{asset("photo/ppp.png")}}" class="img-fluid" alt="" data-aos="zoom-out"
+                    <img src="{{asset("photo/kepalasekolah.jpeg")}}" class="img-fluid" alt="" data-aos="zoom-out"
                         data-aos-delay="300">
                 </div>
             </div>
         </div>
+        
     </section><!-- End Hero Section -->
 
     <main id="main">
 
         <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <section id="about" class="about ">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>About Us</h2>
-                    <p>Learn More <span>About Us</span></p>
+                    <h2>VISI MISI</h2>
+                    <p>TK KUMAI <span>VISI MISI</span></p>
                 </div>
 
                 <div class="row gy-4">
                     <div class="col-lg-7 position-relative about-img"
-                        style="background-image: url(assets/img/about.jpg) ;" data-aos="fade-up" data-aos-delay="150">
+                        style="background-image: url({{asset("photo/ccc.jpeg")}}) ;" data-aos="fade-up" data-aos-delay="150">
                         <div class="call-us position-absolute">
                             <h4>Book a Table</h4>
                             <p>+1 5589 55488 55</p>
@@ -156,8 +177,8 @@
                             </p>
 
                             <div class="position-relative mt-4">
-                                <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
-                                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                                <img src="{{asset("photo/ccc.jpeg")}}" class="img-fluid" alt="">
+                                <a href="{{asset("photo/video.mp4")}}" class="glightbox play-btn"></a>
                             </div>
                         </div>
                     </div>
@@ -167,13 +188,13 @@
         </section><!-- End About Section -->
 
         <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us section-bg">
+        <section id="why-us" class="why-us section-bg" style="background-color: #C0DBEA">
             <div class="container" data-aos="fade-up">
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="why-box">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" style="background-color: #C0DBEA">
+                        <div class="why-box" style="background-color: #FFB4B4">
                             <h3>Why Choose Yummy?</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -192,8 +213,8 @@
 
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                                    <i class="bi bi-clipboard-data"></i>
-                                    <h4>Corporis voluptates officia eiusmod</h4>
+                                    <i class="bi bi-house-door"></i>
+                                    <h4>kelas A</h4>
                                     <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut
                                         aliquip</p>
                                 </div>
@@ -201,21 +222,21 @@
 
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                                    <i class="bi bi-gem"></i>
-                                    <h4>Ullamco laboris ladore pan</h4>
+                                    <i class="bi bi-house-door"></i>
+                                    <h4>Kelas B</h4>
                                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                                         deserunt</p>
                                 </div>
                             </div><!-- End Icon Box -->
 
-                            <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                            {{-- <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-inboxes"></i>
                                     <h4>Labore consequatur incidid dolore</h4>
                                     <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere
                                     </p>
                                 </div>
-                            </div><!-- End Icon Box -->
+                            </div><!-- End Icon Box --> --}}
 
                         </div>
                     </div>
@@ -226,7 +247,7 @@
         </section><!-- End Why Us Section -->
 
         <!-- ======= Stats Counter Section ======= -->
-        <section id="stats-counter" class="stats-counter">
+        {{-- <section id="stats-counter" class="stats-counter">
             <div class="container" data-aos="zoom-out">
 
                 <div class="row gy-4">
@@ -266,7 +287,7 @@
                 </div>
 
             </div>
-        </section><!-- End Stats Counter Section -->
+        </section><!-- End Stats Counter Section --> --}}
 
         <!-- ======= Menu Section ======= -->
         <section id="menu" class="menu">
@@ -316,8 +337,8 @@
                         <div class="row gy-5">
 
                             <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
+                                <a href="{{asset("photo/ccc.jpeg")}}" class="glightbox"><img
+                                        src="{{asset("photo/ccc.jpeg")}}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Magnam Tiste</h4>
                                 <p class="ingredients">
@@ -705,7 +726,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
-                                        <img src="assets/img/testimonials/testimonials-1.jpg"
+                                        <img src="{{asset("photo/ccc.jpeg")}}"
                                             class="img-fluid testimonial-img" alt="">
                                     </div>
                                 </div>
@@ -1061,7 +1082,7 @@
 
                 <div class="mb-3">
                     <iframe style="border:0; width: 100%; height: 350px;"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417.0798173262188!2d111.72095338733739!3d-2.7314910095684706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e08fb51e0c62bbf%3A0xf4c7210555b1a400!2sTK%20Tunas%20Karya%20Kelurahan%20Candi!5e1!3m2!1sid!2sid!4v1683867966797!5m2!1sid!2sid"
                         frameborder="0" allowfullscreen></iframe>
                 </div><!-- End Google Maps -->
 
