@@ -136,6 +136,7 @@
 
     <main id="main">
 
+<<<<<<< HEAD
         <!-- ======= About Section ======= -->
         <section id="about" class="about ">
             <div class="container" data-aos="fade-up">
@@ -179,6 +180,37 @@
                             <div class="position-relative mt-4">
                                 <img src="{{asset("photo/ccc.jpeg")}}" class="img-fluid" alt="">
                                 <a href="{{asset("photo/video.mp4")}}" class="glightbox play-btn"></a>
+=======
+                    <div class="home__inner">
+                        <div class="home__items">
+                            <h1 class="home__title">TK KUMAI<br> taman kanak-kanak</h1>
+                            <p class="home__subtitle text">ada berbagai kegiatan dan membuat anak anda nyaman belajar</p>
+                           
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+               
+
+            </section>
+            <div class="card" style="width: 15rem; hight: 20cm">
+                <img src="{{ asset('photo/all.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+            <section class="our-menu" id="menu">
+                <div class="container our-menu__container">
+                    <h2 class="our-menu__title title">KURIKULUM</h2>
+                    <div class="our-menu__slider">
+                        <div class="our-menu__item">
+                            <div class="our-menu__image">
+                                <img src="photo/sambutan.jpg" alt="" class="our-menu__img img">
+>>>>>>> 09184e9138841b32b0cd9000eeb50c45226b85f9
                             </div>
                         </div>
                     </div>

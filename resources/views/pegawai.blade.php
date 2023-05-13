@@ -8,7 +8,7 @@
         <h3 class="card-title">Data Pegawai TK Tunas Karya Kumai 2023/2024</h3>
     </div>
 
-    <div class="card-body">
+    <div class="card-body table-responsive p-0" style="height: 300px">
         <table class="table table-bordered">
             <thead>
                 <tr style="text-align: center">
@@ -19,8 +19,8 @@
                     <th>Alamat</th>
                     <th>Jabatan</th>
                     <th>Foto</th>
-                    <th>Sertifikat</th>
                     <th colspan="2">Aksi</th>
+                    <th colspan="3">Sertifikat</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,15 +36,40 @@
                     <td>{{$pegawai->alamat_pegawai}}</td>
                     <td>{{$pegawai->jabatan}}</td>
                     <td>
-                        <img height="100" width="150" src="{{asset('storage/photos')}}/{{$pegawai->foto_profil}}" >
-                    </td>
-                    <td>
-                        <img height="100" width="150" src="{{asset('storage/docs')}}/{{$pegawai->foto_sertifikat}}" >
+                        <a href="{{asset('storage/photos')}}/{{$pegawai->foto_profil}}" target="blank">
+                            <img height="100" width="150" src="{{asset('storage/photos')}}/{{$pegawai->foto_profil}}" >
+                        </a>
                     </td>
                     <td>
                         <button type="button" class="btn btn-block btn-warning">
                             <a href="{{route('editPegawai',$pegawai->id)}}" style="text-decoration: none; color:white">
                                 <i class="fas fa-pen"></i> Ubah
+                            </a>
+                        </button>
+                    </td>
+                    <td><form action="{{route('deletePegawai',@$pegawai->id)}}" method="POST" onsubmit="return confirm('Apakah anda yakin ingin menghapus pegawai ini?')">
+                        @csrf
+                        <button type="submit" class="btn btn-block btn-danger"><i class="fas fa-trash"></i> Hapus</button>
+                    </td>   
+                    {{-- <td>
+                        @php
+                            $image = DB::table('pegawais')->where('id',1)->first();
+                            $images = explode('|','$image'->foto_sertifikat);
+                        @endphp
+                        @foreach ($images as $item)
+                            <img src="{{URL::to($item)}}" style="height:100px; width:150px" alt="">
+                            <br>
+                        @endforeach
+                    </td> --}}
+                    <td>
+                        <a href="{{asset('storage/docs')}}/{{$pegawai->foto_sertifikat}}" target="blank">
+                            <img height="100" width="150" src="{{asset('storage/docs')}}/{{$pegawai->foto_sertifikat}}" >
+                        </a>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-block btn-success">
+                            <a href="{{route('createSertifikat')}}" style="text-decoration: none; color:white">
+                                <i class="fas fa-plus"></i> Tambah
                             </a>
                         </button>
                     </td>

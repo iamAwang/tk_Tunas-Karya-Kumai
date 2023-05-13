@@ -24,6 +24,23 @@ class PegawaiController extends Controller
         $gambar = $file->hashName();
         $file->store('photos','public');
 
+        // $image = array();
+        // if($files=$request->file('foto_sertifikat')){
+        //     foreach($files as $sertif){
+        //         $image_name = md5(rand(1000, 10000));
+        //         $ext = strtolower($sertif->getClientOriginalExtension());
+        //         $image_full_name = $image_name.'.'.$ext;
+        //         $upload_path = 'public/docs';
+        //         $image_url = $upload_path.$image_full_name;
+        //         $sertif->move($upload_path, $image_full_name);
+        //         $image[] = $image_url;
+        //     }
+        // }
+
+        // Pegawai::insert([
+        //     'foto_sertifikat' => implode('|',$image)
+        // ]);
+
         $filee = $request->file('foto_sertifikat');
         $sertif = $filee->hashName();
         $filee->store('docs','public');
