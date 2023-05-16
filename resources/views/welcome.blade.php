@@ -57,7 +57,7 @@
                     <li><a href="#about">Visi Misi</a></li>
                     <li><a href="#menu">Pendaftaran</a></li>
                     <li><a href="#events">Acara</a></li>
-                    <li><a href="#chefs">Guru</a></li>
+                    <li><a href="#chefs">Bunda</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -135,8 +135,6 @@
     </section><!-- End Hero Section -->
 
     <main id="main">
-
-<<<<<<< HEAD
         <!-- ======= About Section ======= -->
         <section id="about" class="about ">
             <div class="container" data-aos="fade-up">
@@ -833,8 +831,8 @@
             <div class="container-fluid" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>Events</h2>
-                    <p>Share <span>Your Moments</span> In Our Restaurant</p>
+                    <h2>Acara</h2>
+                    <p>Kegiatan & Acara <span style="color: #FFB4B4">anak-anak</span> di sekolah</p>
                 </div>
 
                 <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
@@ -882,17 +880,20 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>Chefs</h2>
-                    <p>Our <span>Proffesional</span> Chefs</p>
+                    <h2>Bunda</h2>
+                    <p>Nama dan <span>Profil</span> Bunda</p>
                 </div>
 
                 <div class="row gy-4">
-
+                    {{-- @php
+                    $no=$pegawais->FirstItem()
+                @endphp --}}
+                {{-- @foreach ($pegawais as $pegawai) --}}
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="100">
                         <div class="chef-member">
                             <div class="member-img">
-                                <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+                                <img src="{{asset("photo/kepalasekolah.jpeg")}}" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -908,7 +909,7 @@
                             </div>
                         </div>
                     </div><!-- End Chefs Member -->
-
+                {{-- @endforeach --}}
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="chef-member">
@@ -1047,30 +1048,62 @@
                         <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
                                 href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
                                     class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg"
-                                    class="img-fluid" alt=""></a></div>
+                        
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
 
             </div>
         </section><!-- End Gallery Section -->
+
+        <section id="gallery" class="gallery section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>PRESTASI</h2>
+                    <p>Check <span>Our PRESTASI</span></p>
+                </div>
+
+                <div class="gallery-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg"
+                                    class="img-fluid" alt=""></a></div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
+                                    class="img-fluid" alt=""></a></div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>FASLITAS
+                    </h2>
+                    <p>Check <span>Our FASILITAS</span></p>
+                </div>
+
+                <div class="gallery-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg"
+                                    class="img-fluid" alt=""></a></div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
+                                    class="img-fluid" alt=""></a></div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
