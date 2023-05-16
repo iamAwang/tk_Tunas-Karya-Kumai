@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset("photo/ppp.png")}}" rel="icon">
-    <link href="{{asset("photo/ppp.png")}}" rel="apple-touch-icon">
+    <link href="{{ asset('photo/ppp.png') }}" rel="icon">
+    <link href="{{ asset('photo/ppp.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,7 @@
 
             <a href="#" class="logo d-flex align-items-center me-auto me-lg-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{asset("photo/ppp.png")}}" alt=""> 
+                <img src="{{ asset('photo/ppp.png') }}" alt="">
                 <h1>Tk Tunas Karya Kumai<span>.</span></h1>
             </a>
 
@@ -83,9 +83,11 @@
                     <li>
                         @if (Route::has('login'))
                             @auth
-                                <a href="{{ url('/home') }}" class="btn-book-a-table" style="background-color: #FFB4B4">Home</a>
-                        @else
-                                <a href="{{ route('login') }}" class="btn-book-a-table"  style="background-color: #FFB4B4">Log in</a>
+                                <a href="{{ url('/home') }}" class="btn-book-a-table"
+                                    style="background-color: #FFB4B4">Home</a>
+                            @else
+                                <a href="{{ route('login') }}" class="btn-book-a-table"
+                                    style="background-color: #FFB4B4">Log in</a>
 
                                 {{-- @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="btn-book-a-table"  style="background-color: #FFB4B4">Register</a>
@@ -108,15 +110,17 @@
             <div class="row justify-content-between gy-5">
                 <div
                     class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-                    <h2 data-aos="fade-up">Salam<br>Literasi</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Selamat datang di Yayasan kami , yayassan kami membantuk anak anda menjadi yang terhebat di masa</p>
+                    <h2 data-aos="fade-up">Sejarah Berdirinya</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Certa Sejarah berdiri nya Yayasan Tk Tunas Karya Kumai, dimulai dari tahun
+                        1986-04-12, yayassan ini didirakn untuk mencerdaskan anak di yang ingin melanjutkan ke sekolah dasar ...
+                    </p>
                     <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                         <a href="#book-a-table" class="btn-book-a-table">Formulir Pendaftaran</a>
                         {{-- <video >
                             <source src="{{asset("photo/kepalasekolah.mp4")}}" class="glightbox btn-watch-video d-flex align-items-center" type="video/mp4">
                                 <i class="bi bi-play-circle"></i><span>Watch Video</span>
                         </video> --}}
-                        <a href="{{asset("photo/kepalasekolah.mp4")}}"
+                        <a href="{{ asset('photo/kepalasekolah.mp4') }}"
                             class="glightbox btn-watch-video d-flex align-items-center">
                             <i class="bi bi-play-circle"></i><span>Watch Video</span>
                         </a>
@@ -126,11 +130,12 @@
                             <i class="bi bi-play-circle"></i><span>Watch Video</span>
                     </video> --}}
                 </div>
-                <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-                    <img src="{{asset("photo/kepalasekolah.jpeg")}}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+                <div class="col-lg-7 order-1 order-lg-2 text-center text-lg-start " >
+                    <img src="{{ asset('photo/profil3.jpeg') }}" style="border-radius: 24px" class="img-fluid" alt=""
+                        data-aos="zoom-out" data-aos-delay="300">
                 </div>
             </div>
-        </div>     
+        </div>
     </section><!-- End Home Section -->
 
     <main id="main">
@@ -146,7 +151,8 @@
 
                 <div class="row gy-4">
                     <div class="col-lg-7 position-relative about-img"
-                        style="background-image: url({{asset("photo/ccc.jpeg")}}) ;" data-aos="fade-up" data-aos-delay="150">
+                        style="background-image: url({{ asset('photo/ccc.jpeg') }}) ;" data-aos="fade-up"
+                        data-aos-delay="150">
                         <div class="call-us position-absolute">
                             <h4>Syawaliah,S.Pd.AUD</h4>
                             <p>Kepala Sekolah</p>
@@ -172,8 +178,8 @@
                             </ul>
 
                             <div class="position-relative mt-4">
-                                <img src="{{asset("photo/ccc.jpeg")}}" class="img-fluid" alt="">
-                                <a href="{{asset("photo/video.mp4")}}" class="glightbox play-btn"></a>
+                                <img src="{{ asset('photo/ccc.jpeg') }}" class="img-fluid" alt="">
+                                <a href="{{ asset('photo/video.mp4') }}" class="glightbox play-btn"></a>
                             </div>
                         </div>
                     </div>
@@ -238,31 +244,33 @@
 
         <section id="why-us" class="why-us section-bg">
             <div class="container" data-aos="fade-up">
-      
+
                 <div class="row gy-4">
-      
+
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="why-box">
                             <h3>Identitas Sekolah</h3>
                             <p>
-                            NPSN : 30204774 <br>
-                            Status : Swasta <br>
-                            Bentuk Pendidikan : TK <br>
-                            Status Kepemilikan : Yayasan <br>
-                            {{-- SK Pendirian Sekolah : 06/KPTS-CM/I/2014 <br> --}}
-                            Tanggal SK Pendirian : 2014-01-01 <br>
-                            SK Izin Operasional : 10 TAHUN 2016 <br>
-                            {{-- Tanggal SK Izin Operasional : 2016-01-25 --}}
+                                NPSN : 30204774 <br>
+                                Status : Swasta <br>
+                                Bentuk Pendidikan : TK <br>
+                                Status Kepemilikan : Yayasan <br>
+                                {{-- SK Pendirian Sekolah : 06/KPTS-CM/I/2014 <br> --}}
+                                Tanggal SK Pendirian : 2014-01-01 <br>
+                                SK Izin Operasional : 10 TAHUN 2016 <br>
+                                {{-- Tanggal SK Izin Operasional : 2016-01-25 --}}
                             </p>
                             <div class="text-center">
-                                <a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/6B2DB7FC-4C0F-41C5-A64D-0DB774C5B61F" class="more-btn" target="blank">Learn More <i class="bx bx-chevron-right"></i></a>
+                                <a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/6B2DB7FC-4C0F-41C5-A64D-0DB774C5B61F"
+                                    class="more-btn" target="blank">Learn More <i
+                                        class="bx bx-chevron-right"></i></a>
                             </div>
                         </div>
                     </div><!-- End Why Box -->
-        
+
                     <div class="col-lg-8 d-flex align-items-center">
                         <div class="row gy-4">
-        
+
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-clipboard-data"></i>
@@ -270,7 +278,7 @@
                                     <p>Kurikulum yang digunakan adalah Kurikulum Merdeka, sejak tahun 2023</p>
                                 </div>
                             </div><!-- End Icon Box -->
-                            
+
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-inboxes"></i>
@@ -278,7 +286,7 @@
                                     <p>Model pembelajaran yang digunakan adalah pembelajaran berbasis ...</p>
                                 </div>
                             </div><!-- End Icon Box -->
-                            
+
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-gem"></i>
@@ -289,48 +297,52 @@
 
                         </div>
                     </div>
-      
+
                 </div>
-      
+
             </div>
         </section><!-- End Why Us Section -->
 
         <!-- ======= Stats Counter Section ======= -->
         <section id="stats-counter" class="stats-counter">
             <div class="container" data-aos="zoom-out">
-      
+
                 <div class="row gy-4">
-      
+
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
+                                class="purecounter"></span>
                             <p>Guru</p>
                         </div>
                     </div><!-- End Stats Item -->
-      
+
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="19" data-purecounter-duration="1" class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="19" data-purecounter-duration="1"
+                                class="purecounter"></span>
                             <p>Siswa Kelas A</p>
                         </div>
                     </div><!-- End Stats Item -->
-      
+
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
+                                class="purecounter"></span>
                             <p>Siswa Kelas B</p>
                         </div>
                     </div><!-- End Stats Item -->
-      
+
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="37" data-purecounter-duration="1" class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="37" data-purecounter-duration="1"
+                                class="purecounter"></span>
                             <p>Total Siswa</p>
                         </div>
                     </div><!-- End Stats Item -->
-      
+
                 </div>
-      
+
             </div>
         </section><!-- End Stats Counter Section -->
 
@@ -383,8 +395,8 @@
                         <div class="row gy-5">
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset("prestasi/prestasi.jpg")}}" class="glightbox"><img
-                                        src="{{asset("prestasi/prestasi.jpg")}}" class="menu-img img-fluid"
+                                <a href="{{ asset('prestasi/prestasi.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('prestasi/prestasi.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Lomba Mewarnai</h4>
                                 <p class="ingredients">
@@ -396,8 +408,8 @@
                             </div><!-- Menu Item -->
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset("prestasi/prestasi2.png")}}" class="glightbox"><img
-                                        src="{{asset("prestasi/prestasi2.png")}}" class="menu-img img-fluid"
+                                <a href="{{ asset('prestasi/prestasi2.png') }}" class="glightbox"><img
+                                        src="{{ asset('prestasi/prestasi2.png') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Lomba Mewarnai</h4>
                                 <p class="ingredients">
@@ -473,8 +485,8 @@
                         <div class="row gy-5">
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset('fasilitas/kelass.jpg')}}" class="glightbox"><img
-                                        src="{{asset('fasilitas/kelass.jpg')}}" class="menu-img img-fluid"
+                                <a href="{{ asset('fasilitas/kelass.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('fasilitas/kelass.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Ruang Kelas</h4>
                                 <p class="ingredients">
@@ -486,8 +498,8 @@
                             </div><!-- Menu Item -->
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset('fasilitas/mainan.jpg')}}" class="glightbox"><img
-                                        src="{{asset('fasilitas/mainan.jpg')}}" class="menu-img img-fluid"
+                                <a href="{{ asset('fasilitas/mainan.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('fasilitas/mainan.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Taman Bermain</h4>
                                 <p class="ingredients">
@@ -499,8 +511,8 @@
                             </div><!-- Menu Item -->
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset('fasilitas/p3k.jpg')}}" class="glightbox"><img
-                                        src="{{asset('fasilitas/p3k.jpg')}}" class="menu-img img-fluid"
+                                <a href="{{ asset('fasilitas/p3k.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('fasilitas/p3k.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Kotak P3K</h4>
                                 <p class="ingredients">
@@ -512,8 +524,8 @@
                             </div><!-- Menu Item -->
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset('fasilitas/toilet.jpg')}}" class="glightbox"><img
-                                        src="{{asset('fasilitas/toilet.jpg')}}" class="menu-img img-fluid"
+                                <a href="{{ asset('fasilitas/toilet.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('fasilitas/toilet.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Toilet</h4>
                                 <p class="ingredients">
@@ -525,8 +537,8 @@
                             </div><!-- Menu Item -->
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset('fasilitas/keran.jpg')}}" class="glightbox"><img
-                                        src="{{asset('fasilitas/keran.jpg')}}" class="menu-img img-fluid"
+                                <a href="{{ asset('fasilitas/keran.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('fasilitas/keran.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Keran Air</h4>
                                 <p class="ingredients">
@@ -538,8 +550,8 @@
                             </div><!-- Menu Item -->
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{asset('fasilitas/komputer.jpg')}}" class="glightbox"><img
-                                        src="{{asset('fasilitas/komputer.jpg')}}" class="menu-img img-fluid"
+                                <a href="{{ asset('fasilitas/komputer.jpg') }}" class="glightbox"><img
+                                        src="{{ asset('fasilitas/komputer.jpg') }}" class="menu-img img-fluid"
                                         alt=""></a>
                                 <h4>Komputer & Printer</h4>
                                 <p class="ingredients">
@@ -774,8 +786,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{asset("photo/ccc.jpeg")}}"
-                                            class="img-fluid testimonial-img" alt="">
+                                        <img src="{{ asset('photo/ccc.jpeg') }}" class="img-fluid testimonial-img"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -802,7 +814,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{asset('photo/kepalasekolah.jpeg')}}"
+                                        <img src="{{ asset('photo/kepalasekolah.jpeg') }}"
                                             class="img-fluid testimonial-img" alt="">
                                     </div>
                                 </div>
@@ -816,7 +828,11 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Saya senang menjadi salah satu orang tua yang mengirimkan anaknya ke TK Tunas Karya Kumai, karena dukungan dari dewan guru TK Tunas Karya Kumai, anak saya mendapatkan beberapa juara lomba mewarnai tingkat kabupaten dan kecamatan. Sekali lagi, terimakasih bunda-bunda TK Tunas Karya Kumai.
+                                                Saya senang menjadi salah satu orang tua yang mengirimkan anaknya ke TK
+                                                Tunas Karya Kumai, karena dukungan dari dewan guru TK Tunas Karya Kumai,
+                                                anak saya mendapatkan beberapa juara lomba mewarnai tingkat kabupaten
+                                                dan kecamatan. Sekali lagi, terimakasih bunda-bunda TK Tunas Karya
+                                                Kumai.
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
                                             <h3>Nadziroh</h3>
@@ -826,11 +842,16 @@
                                                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                                     class="bi bi-star-fill">
                                                 </i>
+                                                <br>
+                                                <a href="{{ asset('photo/kepalasekolah.mp4') }}"
+                                                    class="glightbox btn-watch-video d-flex align-items-center">
+                                                    <i class="bi bi-play-circle" style="color: black"></i><span>Watch Video</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{asset('photo/testimoni2.jpeg')}}"
+                                        <img src="{{ asset('photo/testimoni2.jpeg') }}"
                                             class="img-fluid testimonial-img" alt="">
                                     </div>
                                 </div>
@@ -890,8 +911,7 @@
                             <h3>Penerimaan Peserta Didik Baru</h3>
                             <div class="price align-self-start">2023/2024</div>
                             <p class="description">
-                                Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis
-                                facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
+                               pada tahun ini sekolah kita membuka pendaftaran pada bulan juni
                             </p>
                         </div><!-- End Event item -->
 
@@ -935,12 +955,12 @@
                     {{-- @php
                     $no=$pegawais->FirstItem()
                 @endphp --}}
-                {{-- @foreach ($pegawais as $pegawai) --}}
+                    {{-- @foreach ($pegawais as $pegawai) --}}
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="100">
                         <div class="chef-member">
                             <div class="member-img">
-                                <img src="{{asset("photo/kepalasekolah.jpeg")}}" class="img-fluid" alt="">
+                                <img src="{{ asset('photo/kepalasekolah.jpeg') }}" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href="#"><i class="bi bi-twitter"></i></a>
                                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -956,7 +976,7 @@
                             </div>
                         </div>
                     </div><!-- End Chefs Member -->
-                {{-- @endforeach --}}
+                    {{-- @endforeach --}}
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="chef-member">
@@ -985,8 +1005,10 @@
                                 <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href="#"><i class="bi bi-twitter"></i></a>
-                                    <a href="https://www.facebook.com/imalizafathonah.anwari?mibextid=ZbWKwL" target="blank"><i class="bi bi-facebook"></i></a>
-                                    <a href="https://instagram.com/lizasahudi?igshid=MzRlODBiNWFlZA==" target="blank"><i class="bi bi-instagram"></i></a>
+                                    <a href="https://www.facebook.com/imalizafathonah.anwari?mibextid=ZbWKwL"
+                                        target="blank"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://instagram.com/lizasahudi?igshid=MzRlODBiNWFlZA=="
+                                        target="blank"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
@@ -1007,62 +1029,78 @@
         <!-- ======= Formulir Pendaftaran Section ======= -->
         <section id="book-a-table" class="book-a-table">
             <div class="container" data-aos="fade-up">
-      
-              <div class="section-header">
-                <h2>Formulir Pendaftaran</h2>
-                <p>FORMULIR <span>PENDAFTARAN</span> PESERTA DIDIK BARU</p>
-              </div>
-      
-              <div class="row g-0">
-      
-                <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
-      
-                <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-                  <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-                    <div class="row gy-4">
-                      <div class="col-lg-4 col-md-6">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                        <input type="text" class="form-control" name="tempat-lahir" id="tempat-lahir" placeholder="Tempat Lahir" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                        <input type="text" name="date" class="form-control" id="date" placeholder="Tanggal Lahir" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                        <input type="text" class="form-control" name="agama" id="agama" placeholder="Agama" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                        <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                        <input type="number" class="form-control" name="nomor-hp" id="nomor-hp" placeholder="No. Hp Orang Tua" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
-                        <div class="validate"></div>
-                      </div>
-                    </div>
-                    <div class="form-group mt-3">
-                      <textarea class="form-control" name="message" rows="5" placeholder="Keterangan"></textarea>
-                      <div class="validate"></div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Data Anda sudah terkirim. Kami akan menghubungi Anda kembali lewat no hp yang tertera untuk mengkonfirmasi pendaftaraan anak Anda. Terima Kasih!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Kirim</button></div>
-                  </form>
-                </div><!-- End Reservation Form -->
-      
-              </div>
-      
+
+                <div class="section-header">
+                    <h2>Formulir Pendaftaran</h2>
+                    <p>FORMULIR <span>PENDAFTARAN</span> PESERTA DIDIK BARU</p>
+                </div>
+
+                <div class="row g-0">
+
+                    <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"
+                        data-aos="zoom-out" data-aos-delay="200"></div>
+
+                    <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+                        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div class="row gy-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Nama" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars">
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" class="form-control" name="tempat-lahir" id="tempat-lahir"
+                                        placeholder="Tempat Lahir" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars">
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" name="date" class="form-control" id="date"
+                                        placeholder="Tanggal Lahir" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars">
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" class="form-control" name="agama" id="agama"
+                                        placeholder="Agama" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars">
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" class="form-control" name="alamat" id="alamat"
+                                        placeholder="Alamat" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars">
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="number" class="form-control" name="nomor-hp" id="nomor-hp"
+                                        placeholder="No. Hp Orang Tua" data-rule="minlen:1"
+                                        data-msg="Please enter at least 1 chars">
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Keterangan"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Data Anda sudah terkirim. Kami akan menghubungi Anda kembali
+                                    lewat no hp yang tertera untuk mengkonfirmasi pendaftaraan anak Anda. Terima Kasih!
+                                </div>
+                            </div>
+                            <div class="text-center"><button type="submit">Kirim</button></div>
+                        </form>
+                    </div><!-- End Reservation Form -->
+
+                </div>
+
             </div>
         </section><!-- End Formulir Pendaftaran Section -->
-      
+
         <!-- ======= Galeri Section ======= -->
         <section id="galeri" class="gallery section-bg">
             <div class="container" data-aos="fade-up">
@@ -1080,7 +1118,7 @@
                         <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
                                 href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
                                     class="img-fluid" alt=""></a></div>
-                        
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -1088,122 +1126,76 @@
             </div>
         </section><!-- End Gallery Section -->
 
-        <section id="gallery" class="gallery section-bg">
-            <div class="container" data-aos="fade-up">
 
-                <div class="section-header">
-                    <h2>PRESTASI</h2>
-                    <p>Check <span>Our PRESTASI</span></p>
-                </div>
-
-                <div class="gallery-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="gallery" class="gallery section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header">
-                    <h2>FASLITAS
-                    </h2>
-                    <p>Check <span>Our FASILITAS</span></p>
-                </div>
-
-                <div class="gallery-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                                href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
-                                    class="img-fluid" alt=""></a></div>
-                        
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-        </section><!-- End Galeri Section -->
 
         <!-- ======= Kontak Section ======= -->
         <section id="kontak" class="contact">
             <div class="container" data-aos="fade-up">
-      
+
                 <div class="section-header">
                     <h2>Kontak</h2>
                     <p>Butuh Bantuan? <span>Hubungi Kami</span></p>
                 </div>
-      
+
                 <div class="mb-3">
                     {{-- <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> --}}
-                    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11945.80878991808!2d111.72305002984818!3d-2.7320633341805984!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e08fb51e0c62bbf%3A0xf4c7210555b1a400!2sTK%20Tunas%20Karya%20Kelurahan%20Candi!5e0!3m2!1sid!2sid!4v1683775280122!5m2!1sid!2sid"></iframe>
+                    <iframe style="border:0; width: 100%; height: 350px;"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11945.80878991808!2d111.72305002984818!3d-2.7320633341805984!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e08fb51e0c62bbf%3A0xf4c7210555b1a400!2sTK%20Tunas%20Karya%20Kelurahan%20Candi!5e0!3m2!1sid!2sid!4v1683775280122!5m2!1sid!2sid"></iframe>
                 </div><!-- End Google Maps -->
-      
+
                 <div class="row gy-4">
-      
-                <div class="col-md-6">
-                    <div class="info-item  d-flex align-items-center">
-                        <i class="icon bi bi-map flex-shrink-0"></i>
-                        <div>
-                            <h3>Alamat</h3>
-                            <p>Jalan Madrasah <br>
-                                No. 402 <br>
-                                RT. 7 <br>
-                                RW. 2 <br>
-                                Kelurahan Candi <br>
-                                Kecamatan Kumai
-                            </p>
-                        </div>
-                    </div>
-                </div><!-- End Info Item -->
-      
-                <div class="col-md-6">
-                    <div class="info-item d-flex align-items-center">
-                        <i class="icon bi bi-envelope flex-shrink-0"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>tktunaskaryakumai@gmail.com</p>
-                        </div>
-                    </div>
-                </div><!-- End Info Item -->
-      
-                <div class="col-md-6">
-                    <div class="info-item  d-flex align-items-center">
-                        <i class="icon bi bi-telephone flex-shrink-0"></i>
-                        <div>
-                            <h3>Telepon</h3>
-                            <p>0822 5081 9383 <br> 0897 9712 322</p>
-                        </div>
-                    </div>
-                </div><!-- End Info Item -->
-      
-                <div class="col-md-6">
-                    <div class="info-item  d-flex align-items-center">
-                        <i class="icon bi bi-share flex-shrink-0"></i>
-                        <div>
-                            <h3>Jam Buka</h3>
-                            <div><strong>Senin - Sabtu:</strong> 7AM - 10AM <br>
-                                <strong>Minggu:</strong> Tutup
+
+                    <div class="col-md-6">
+                        <div class="info-item  d-flex align-items-center">
+                            <i class="icon bi bi-map flex-shrink-0"></i>
+                            <div>
+                                <h3>Alamat</h3>
+                                <p>Jalan Madrasah <br>
+                                    No. 402 <br>
+                                    RT. 7 <br>
+                                    RW. 2 <br>
+                                    Kelurahan Candi <br>
+                                    Kecamatan Kumai
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div><!-- End Info Item -->
-      
-            </div>
-      
-              {{-- <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
+                    </div><!-- End Info Item -->
+
+                    <div class="col-md-6">
+                        <div class="info-item d-flex align-items-center">
+                            <i class="icon bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>tktunaskaryakumai@gmail.com</p>
+                            </div>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="col-md-6">
+                        <div class="info-item  d-flex align-items-center">
+                            <i class="icon bi bi-telephone flex-shrink-0"></i>
+                            <div>
+                                <h3>Telepon</h3>
+                                <p>0822 5081 9383 <br> 0897 9712 322</p>
+                            </div>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="col-md-6">
+                        <div class="info-item  d-flex align-items-center">
+                            <i class="icon bi bi-share flex-shrink-0"></i>
+                            <div>
+                                <h3>Jam Buka</h3>
+                                <div><strong>Senin - Sabtu:</strong> 7AM - 10AM <br>
+                                    <strong>Minggu:</strong> Tutup
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+                {{-- <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
                 <div class="row">
                   <div class="col-xl-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -1225,7 +1217,7 @@
                 </div>
                 <div class="text-center"><button type="submit">Send Message</button></div>
               </form><!--End Contact Form --> --}}
-      
+
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
@@ -1247,9 +1239,9 @@
                             Kecamatan Kumai
                         </p>
                     </div>
-        
+
                 </div>
-    
+
                 <div class="col-lg-3 col-md-6 footer-links d-flex">
                     <i class="bi bi-telephone icon"></i>
                     <div>
@@ -1260,45 +1252,48 @@
                         </p>
                     </div>
                 </div>
-    
+
                 <div class="col-lg-3 col-md-6 footer-links d-flex">
                     <i class="bi bi-clock icon"></i>
                     <div>
                         <h4>Jam Buka</h4>
                         <p>
-                        <strong>Senin - Sabtu: 7AM</strong> - 10AM<br>
-                        Minggu: Tutup
+                            <strong>Senin - Sabtu: 7AM</strong> - 10AM<br>
+                            Minggu: Tutup
                         </p>
                     </div>
                 </div>
-    
+
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Follow Us</h4>
                     <div class="social-links d-flex">
                         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
-                        <a href="https://www.facebook.com/tktunaskaryakumai.tktunaskaryakumai?mibextid=ZbWKwL" class="facebook" target="blank"><i class="bi bi-facebook"></i></a>
-                        <a href="https://instagram.com/tktunaskaryakumai?igshid=NTc4MTIwNjQ2YQ==" class="instagram" target="blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/tktunaskaryakumai.tktunaskaryakumai?mibextid=ZbWKwL"
+                            class="facebook" target="blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com/tktunaskaryakumai?igshid=NTc4MTIwNjQ2YQ==" class="instagram"
+                            target="blank"><i class="bi bi-instagram"></i></a>
                         {{-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> --}}
                     </div>
                 </div>
-    
+
             </div>
         </div>
-    
+
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Yummy</span></strong>. TK Tunas Karya Kumai
+                &copy; Copyright <strong><span>Redexc</span></strong>. TK Tunas Karya Kumai
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
-                Designed by <a href="https://bootstrapmade.com/" target="blank">BootstrapMade</a> Edited by Web & Programming <a href="https://lkpenter.com/" target="blank">Enter</a> | Kelompok 2
+                Designed by <a href="https://bootstrapmade.com/" target="blank">BootstrapMade</a> Edited by Web &
+                Programming <a href="https://lkpenter.com/" target="blank">Enter</a> | Kelompok 2
             </div>
         </div>
-    
-      </footer><!-- End Footer -->
+
+    </footer><!-- End Footer -->
     <!-- End Footer -->
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
