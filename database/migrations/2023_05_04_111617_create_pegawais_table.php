@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('jabatan');
             $table->string('foto_profil');
             $table->string('foto_sertifikat');
+            $table->integer('id_sekolah');
             $table->timestamps();
         });
     }

@@ -29,6 +29,7 @@ Route::get('/developer/create',[DeveloperController::class,'create']);
 Route::post('/developer/store',[DeveloperController::class,'store']);
 
 Route::get('/sekolah',[SekolahController::class,'index'])->name('indexSekolah');
+// Route::get('/', [SekolahController::class,'view'])->name('welcomes');
 
 Route::get('/pegawai',[PegawaiController::class,'index'])->name('indexPegawai');
 Route::get('/create-pegawai',[PegawaiController::class, 'create'])->name('createPegawai');

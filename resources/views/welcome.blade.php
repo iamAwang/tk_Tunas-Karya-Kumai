@@ -80,7 +80,7 @@
                         </ul>
                     </li> --}}
                     <li><a href="#kontak">Kontak</a></li>
-                    <li>
+                    <li  class="navbar">
                         @if (Route::has('login'))
                             @auth
                                 <a href="{{ url('/home') }}" class="btn-book-a-table"
@@ -89,9 +89,9 @@
                                 <a href="{{ route('login') }}" class="btn-book-a-table"
                                     style="background-color: #FFB4B4">Log in</a>
 
-                                {{-- @if (Route::has('register'))
+                                @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="btn-book-a-table"  style="background-color: #FFB4B4">Register</a>
-                                @endif --}}
+                                @endif
                             @endauth
                         @endif
                     </li>

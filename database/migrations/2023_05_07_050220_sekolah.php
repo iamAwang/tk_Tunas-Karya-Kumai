@@ -15,10 +15,16 @@ return new class extends Migration
     {
         Schema::create('sekolahs', function (Blueprint $table) {
             $table->id();
-            $table->string('logo_sekolah');
-            $table->string('foto_sekolah_1');
-            $table->string('foto_sekolah_2');
-            $table->string('foto_sekolah_3');
+            $table->string('foto_sekolah_events');
+            $table->string('foto_sekolah_gallery');
+            $table->string('foto_sekolah_prestasi');
+            $table->string('foto_sekolah_fasilitas');
+            $table->string('description_events');
+            $table->string('description_prstasi');
+            $table->string('description_fasilitass');
+            $table->string('judul_events');
+            $table->date('waktu_events');
+
             $table->timestamps();
         });
     }
@@ -30,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('sekolahs');
     }
 };
