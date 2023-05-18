@@ -8,12 +8,8 @@ export default defineConfig({
     plugins: [
         // add css and js file
         laravel({
-<<<<<<< HEAD
             // input: ['resources/css/app.css', 'resources/js/app.js'],
             input: ["resources/js/app.js"],
-=======
-            input: [ 'resources/js/app.js'],
->>>>>>> 5a400e22a305b35b7bdfc75b8cb6333d837ef49b
             refresh: true,
         }),
         // auto refresh blade files
