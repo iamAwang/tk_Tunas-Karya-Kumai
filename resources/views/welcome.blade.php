@@ -196,11 +196,13 @@
                                 Status Kepemilikan : Yayasan <br>
                                 {{-- SK Pendirian Sekolah : 06/KPTS-CM/I/2014 <br> --}}
                                 Tanggal SK Pendirian : 2014-01-01 <br>
-                                SK Izin Operasional : 10 TAHUN 2016 <br>
+                                Tanggal SK Operasional	:	25-01-2016 <br>
+                                Akreditasi : C
+                                {{-- No SK Izin Operasional : 10/2016 <br> --}}
                                 {{-- Tanggal SK Izin Operasional : 2016-01-25 --}}
                             </p>
                             <div class="text-center">
-                                <a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/6B2DB7FC-4C0F-41C5-A64D-0DB774C5B61F"
+                                <a href="https://dapo.kemdikbud.go.id/sekolah/782E7FD37A1612CC5A16"
                                     class="more-btn" target="blank">Learn More <i
                                         class="bx bx-chevron-right"></i></a>
                             </div>
@@ -214,10 +216,10 @@
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-clipboard-data"></i>
                                     <h4>Kurikulum Pembelajaran</h4>
-                                    <p>Kurikulum yang digunakan adalah Kurikulum Merdeka
-                                        <a href="https://ayoguruberbagi.kemdikbud.go.id/rpp/modul-ajar-paud-tk-ra-kurikulum-merdeka-2022" target="_blank" style="color: grey" aria-label="go to website">
+                                    <p>Kurikulum yang digunakan adalah
+                                        <a href="https://ayoguruberbagi.kemdikbud.go.id/rpp/modul-ajar-paud-tk-ra-kurikulum-merdeka-2022" target="_blank" style="color: grey" aria-label="go to website">Kurikulum Merdeka
                                             <svg xmlns="http://www.w3.org/2000/svg" width="15%" height="15%" viewBox="0 0 256 256"><path fill="currentColor" d="M224 104a8 8 0 0 1-16 0V59.32l-66.33 66.34a8 8 0 0 1-11.32-11.32L196.68 48H152a8 8 0 0 1 0-16h64a8 8 0 0 1 8 8Zm-40 24a8 8 0 0 0-8 8v72H48V80h72a8 8 0 0 0 0-16H48a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-72a8 8 0 0 0-8-8Z"/></svg>
-                                        </a>
+                                        </a> sejak tahun 2023
                                     </p>
                                 </div>
                             </div><!-- End Icon Box -->
@@ -820,8 +822,8 @@
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
                                                 Menurut saya, TK Tunas Karya Kumai sangat bagus dalam hal fasilitas karena ada mainan dan pagar yang tinggi,
-                                                untuk hal prestasi juga sering mengikuti dan memenangkan lomba mewarnai, untuk ruang kelas juga bagus karena gedungnya berdiri dengan kokoh,
-                                                untuk halamannya sangat bersih serta dalam hal sanitasi juga sangat bagus.
+                                                untuk hal prestasi juga sering mengikuti dan memenangkan lomba mewarnai, ruang kelas juga bagus karena gedungnya berdiri dengan kokoh,
+                                                halamannya sangat bersih serta dalam hal sanitasi juga sangat bagus.
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
                                             <h3>
