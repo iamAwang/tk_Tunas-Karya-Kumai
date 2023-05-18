@@ -215,7 +215,7 @@
                                     <i class="bi bi-clipboard-data"></i>
                                     <h4>Kurikulum Pembelajaran</h4>
                                     <p>Kurikulum yang digunakan adalah Kurikulum Merdeka
-                                        <a href="https://ayoguruberbagi.kemdikbud.go.id/rpp/modul-ajar-paud-tk-ra-kurikulum-merdeka-2022" target="_blank" style="color: grey" aria-label="go to website">kelompok
+                                        <a href="https://ayoguruberbagi.kemdikbud.go.id/rpp/modul-ajar-paud-tk-ra-kurikulum-merdeka-2022" target="_blank" style="color: grey" aria-label="go to website">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="15%" height="15%" viewBox="0 0 256 256"><path fill="currentColor" d="M224 104a8 8 0 0 1-16 0V59.32l-66.33 66.34a8 8 0 0 1-11.32-11.32L196.68 48H152a8 8 0 0 1 0-16h64a8 8 0 0 1 8 8Zm-40 24a8 8 0 0 0-8 8v72H48V80h72a8 8 0 0 0 0-16H48a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-72a8 8 0 0 0-8-8Z"/></svg>
                                         </a>
                                     </p>
