@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Pegawai;
 
 class Sekolah extends Model
 {
@@ -11,4 +12,7 @@ class Sekolah extends Model
     // protected $fillable = [
 
     // ]
+    public function Pegawai(){
+        return $this->hashOne(Pegawai::class,'id_sekolah');
+    }
 }
