@@ -11,7 +11,7 @@
           crossorigin="anonymous"/>
 
           @vite(['resources/css/app.css'])
-          {{-- @vite(['resources/js/app.js']) --}}
+          @vite(['resources/js/app.js'])
 
     @stack('third_party_stylesheets')
 

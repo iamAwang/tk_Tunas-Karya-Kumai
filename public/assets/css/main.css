@@ -950,6 +950,34 @@ section {
     margin: 0 auto;
 }
 
+.testimonials .testimonial-item .cover-img {
+    border-radius: 0%;
+    border: none;
+    width: 50%;
+    float: right;
+}
+@media (max-width: 316px) {
+    .testimonials .testimonial-item .cover-img {
+        width: 100%;
+    }
+}
+
+.testimonials .testimonial-item .cover-cover-img {
+    display: none;
+}
+
+@media (max-width: 316px) {
+    .testimonials .testimonial-item .cover-cover-img {
+        display: inline-block;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+}
+
 .testimonials .testimonial-item h3 {
     font-size: 20px;
     font-weight: bold;

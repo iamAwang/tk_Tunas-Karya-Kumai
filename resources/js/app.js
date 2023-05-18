@@ -1,5 +1,6 @@
-require('./bootstrap');
-require('admin-lte');
+// require('./bootstrap');
+// require('admin-lte');
 
-// import "admin-lte";
-// import "../css/app.css";
+import "./bootstrap";
+import "admin-lte";
+import "../css/app.css";
