@@ -35,4 +35,24 @@
         <i class="nav-icon fas fa-users"></i>
         <p>Data Siswa</p>
     </a>
+
+    <a href="{{ route('uploadGaleri') }}" class="nav-link {{ Request::is('upload-galeri') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-images"></i>
+        <p>Upload Galeri</p>
+    </a>
+
+    <a href="" class="nav-link ">
+        <i class="nav-icon fas fa-info"></i>
+        <p>Upload Berita Acara</p>
+    </a>
+
+    <a href="#" class="nav-link ">
+        <i class="nav-icon fas fa-certificate"></i>
+        <p>Upload Prestasi</p>
+    </a>
+
+    <a href="" class="nav-link ">
+        <i class="nav-icon fas fa-envelope"></i>
+        <p>Pesan</p>
+    </a>
 </li>

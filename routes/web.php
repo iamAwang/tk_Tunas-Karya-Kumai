@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\SertifikatController;
+use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\SertifikatController;
 |
 */
 
-Route::get('/', function () {return view('welcome');});
+// Route::get('/', function () {return view('welcome');});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -29,7 +30,7 @@ Route::get('/developer/create',[DeveloperController::class,'create']);
 Route::post('/developer/store',[DeveloperController::class,'store']);
 
 Route::get('/sekolah',[SekolahController::class,'index'])->name('indexSekolah');
-// Route::get('/', [SekolahController::class,'view'])->name('welcomes');
+Route::get('/', [SekolahController::class,'view'])->name('welcomes');
 
 Route::get('/pegawai',[PegawaiController::class,'index'])->name('indexPegawai');
 Route::get('/create-pegawai',[PegawaiController::class, 'create'])->name('createPegawai');
@@ -47,3 +48,5 @@ Route::post('/delete-siswa/{id}',[SiswaController::class, 'delete'])->name('dele
 
 Route::get('/cerate-sertifikat',[SertifikatController::class, 'create'])->name('createSertifikat');
 Route::post('/store-sertifikat',[SertifikatController::class, 'store'])->name('storeSertifikat');
+
+Route::get('/upload-galeri',[UploadController::class, 'create'])->name('uploadGaleri');

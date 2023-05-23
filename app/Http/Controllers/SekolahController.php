@@ -14,9 +14,11 @@ class SekolahController extends Controller
     }
 
     public function view(){
-        $imgs = Pegawai::all($id);
-        $sekolahs = Sekolah::all();
-        $roles = Role::all();
-        return view ('welcome',compact(['roles','imgs','sekolahs']));
+        $pegawais = Pegawai::all();
+        // $sekolahs = Sekolah::all();
+        // $roles = Role::all();
+        return view ('welcome',compact(['pegawais']));
     }
+
+    
 }

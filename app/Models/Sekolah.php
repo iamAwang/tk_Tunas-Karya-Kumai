@@ -9,10 +9,11 @@ use App\Models\Pegawai;
 class Sekolah extends Model
 {
     protected $table = 'sekolahs';
-    // protected $fillable = [
+    protected $fillable = [
+        'id_sekolah',
 
-    // ]
-    public function Pegawai(){
-        return $this->hashOne(Pegawai::class,'id_sekolah');
+    ];
+    public function pegawais(){
+        return $this->hasMany(Pegawai::class,'id','id_sekolah');
     }
 }

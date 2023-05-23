@@ -8,9 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Pegawai extends Model
 {
     protected $table='pegawais';
-    protected $fillable=['nama_pegawai','tempat_lahir_pegawai','tanggal_lahir_pegawai','alamat_pegawai','jabatan','foto_profil','foto_sertifikat','id_sekolah',];
+    protected $fillable=['nama_pegawai','tempat_lahir_pegawai','tanggal_lahir_pegawai',
+      'alamat_pegawai',
+      'jabatan',
+      'foto_profil',
+      'foto_sertifikat',
+      'id_sekolah',
+    ];
 
     public function siswas(){
         return $this->hasMany(Siswa::class,'id','id_pegawai');
+    }
+
+    public function sekolahs(){
+        return $this->hasMany(Pegawai::class,'id','id_sekolah');
     }
 }

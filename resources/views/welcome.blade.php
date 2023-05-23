@@ -38,14 +38,49 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  {{-- <style>
-    a[target=_blank], a[href^="http"] {
-        background-image: url(../images/external-link.svg);
-        background-repeat: no-repeat;
-        background-position: top right;
-        padding-right: 1.5rem;
-    }
-</style> --}}
+    <style>
+        .flower {
+            background: #FDF4F5;
+            transform-origin: 50% 50%;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            box-shadow:
+                -16px -16px 0 4px #C0DBEA,
+                16px -16px 0 4px #C0DBEA,
+                16px 16px 0 4px #C0DBEA,
+                -16px 16px 0 4px #C0DBEA;
+            animation: flowerkey 5s infinite ease-in-out;
+        }
+
+        .curved {
+            background: #FFB4B4;
+
+        }
+        
+
+        @keyframes flowerkey {
+            0% {
+                transform: rotate(0deg);
+                box-shadow:
+                    -16px -16px 0 4px #C0DBEA,
+                    16px -16px 0 4px #C0DBEA,
+                    16px 16px 0 4px #C0DBEA,
+                    -16px 16px 0 4px #C0DBEA;
+            }
+
+            50% {
+                transform: rotate(1080deg);
+                box-shadow:
+                    16px 16px 0 4px #C0DBEA,
+                    -16px 16px 0 4px #C0DBEA,
+                    -16px -16px 0 4px #C0DBEA,
+                    16px -16px 0 4px #C0DBEA;
+            }
+
+
+        }
+    </style>
 
 </head>
 
@@ -71,24 +106,27 @@
                     <li><a href="#guru">Guru</a></li>
                     <li><a href="#galeri">Galeri</a></li>
                     <li><a href="#kontak">Kontak</a></li>
-                    
+
                     @if (Route::has('login'))
-                    <li>
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-                    @endauth
-                    </li>
-                    <li>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn-book-a-table">Register</a>
-                        @endif
-                    </li>
+                        <li>
+                            @auth
+                                <a href="{{ url('/home') }}"
+                                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
+                            @else
+                                <a href="{{ route('login') }}"
+                                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
+                                    in</a>
+                            @endauth
+                        </li>
+                        <li>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="btn-book-a-table">Register</a>
+                            @endif
+                        </li>
                     @endif
                 </ul>
             </nav><!-- .navbar -->
-            
+
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -98,9 +136,11 @@
     <!-- ======= Home Section ======= -->
     <section id="home" class="hero d-flex align-items-center section-bg" style="background-color: #FFB4B4">
         <div class="container">
+
             <div class="row justify-content-between gy-5">
                 <div
                     class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                    <div class="flower"></div>
                     <h2 data-aos="fade-up">Sejarah Berdirinya</h2>
                     <p data-aos="fade-up" data-aos-delay="100">TK Tunas Karya Kumai berdiri pada tahun 1985
                     </p>
@@ -115,25 +155,33 @@
                             <i class="bi bi-play-circle"></i><span>Watch Video</span>
                         </a>
                     </div>
+
                     {{-- <video class="d-flex" data-aos="fade-up" data-aos-delay="200">
                         <source src="{{asset("photo/kepalasekolah.mp4")}}" class="glightbox btn-watch-video d-flex align-items-center" type="video/mp4">
                             <i class="bi bi-play-circle"></i><span>Watch Video</span>
                     </video> --}}
                 </div>
-                <div class="col-lg-7 order-1 order-lg-2 text-center text-lg-start " >
-                    <img src="{{ asset('photo/profil3.jpeg') }}" style="border-radius: 24px" class="img-fluid" alt=""
-                        data-aos="zoom-out" data-aos-delay="300">
+                <div class="col-lg-7 order-1 order-lg-2 text-center text-lg-start ">
+                    <img src="{{ asset('photo/profil3.jpeg') }}" style="border-radius: 24px" class="img-fluid"
+                        alt="" data-aos="zoom-out" data-aos-delay="300">
                 </div>
+
             </div>
         </div>
     </section><!-- End Home Section -->
+
+    <div class="curved"><svg viewBox="0 0 1440 319">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg></div>
 
     <main id="main">
 
         <!-- ======= Visi Misi Section ======= -->
         <section id="visi-misi" class="about ">
             <div class="container" data-aos="fade-up">
-
+                <div class="flower"></div>
                 <div class="section-header">
                     <h2>VISI MISI</h2>
                     <p><span>VISI & MISI</span> TK TUNAS KARYA KUMAI</p>
@@ -154,7 +202,8 @@
                                 Visi TK Tunas Karya Kumai
                             </p>
                             <ul>
-                                <li><i class="bi bi-check2-all"></i> Membantu mengembangkan kemampuan anak dalam bersosialisasi dan menuju anak yang cerdas, mandiri dan berakhlak mulia.</li>
+                                <li><i class="bi bi-check2-all"></i> Membantu mengembangkan kemampuan anak dalam
+                                    bersosialisasi dan menuju anak yang cerdas, mandiri dan berakhlak mulia.</li>
                                 {{-- <li><i class="bi bi-check2-all"></i> #</li> --}}
                                 {{-- <li><i class="bi bi-check2-all"></i> #</li> --}}
                             </ul>
@@ -162,11 +211,15 @@
                                 Misi TK Tunas Karya Kumai
                             </p>
                             <ul>
-                                <li><i class="bi bi-check2-all"></i> Melatih kemampuan diri anak sesuai potensi yang mereka miliki dan tingkat perkembangannya.</li>
+                                <li><i class="bi bi-check2-all"></i> Melatih kemampuan diri anak sesuai potensi yang
+                                    mereka miliki dan tingkat perkembangannya.</li>
                                 <li><i class="bi bi-check2-all"></i> Mengenalkan disiplin kepada anak sejak dini.</li>
-                                <li><i class="bi bi-check2-all"></i> Membentuk pribadi yang mandiri dan berkualitas.</li>
-                                <li><i class="bi bi-check2-all"></i> Memiasakan anak hidup bersih, sehat dan teratur.</li>
-                                <li><i class="bi bi-check2-all"></i> Memberikan pelayanan kepada setiap pribadi tanpa perbedaan.</li>
+                                <li><i class="bi bi-check2-all"></i> Membentuk pribadi yang mandiri dan berkualitas.
+                                </li>
+                                <li><i class="bi bi-check2-all"></i> Memiasakan anak hidup bersih, sehat dan teratur.
+                                </li>
+                                <li><i class="bi bi-check2-all"></i> Memberikan pelayanan kepada setiap pribadi tanpa
+                                    perbedaan.</li>
                             </ul>
 
                             <div class="position-relative mt-4">
@@ -180,6 +233,9 @@
             </div>
         </section><!-- End Visi Misi Section -->
 
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
+            <path fill="rgb(238, 238, 238)" fill-opacity="1" d="M0,64L130.9,128L261.8,128L392.7,64L523.6,192L654.5,320L785.5,288L916.4,224L1047.3,320L1178.2,288L1309.1,224L1440,256L1440,320L1309.1,320L1178.2,320L1047.3,320L916.4,320L785.5,320L654.5,320L523.6,320L392.7,320L261.8,320L130.9,320L0,320Z"></path>
+          </svg>
         <!-- ======= Profil Section ======= -->
         <section id="why-us" class="why-us section-bg">
             <div class="container" data-aos="fade-up">
@@ -196,15 +252,14 @@
                                 Status Kepemilikan : Yayasan <br>
                                 {{-- SK Pendirian Sekolah : 06/KPTS-CM/I/2014 <br> --}}
                                 Tanggal SK Pendirian : 2014-01-01 <br>
-                                Tanggal SK Operasional	:	25-01-2016 <br>
+                                Tanggal SK Operasional : 25-01-2016 <br>
                                 Akreditasi : C
                                 {{-- No SK Izin Operasional : 10/2016 <br> --}}
                                 {{-- Tanggal SK Izin Operasional : 2016-01-25 --}}
                             </p>
                             <div class="text-center">
-                                <a href="https://dapo.kemdikbud.go.id/sekolah/782E7FD37A1612CC5A16"
-                                    class="more-btn" target="blank">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
+                                <a href="https://dapo.kemdikbud.go.id/sekolah/782E7FD37A1612CC5A16" class="more-btn"
+                                    target="blank">Learn More <i class="bx bx-chevron-right"></i></a>
                             </div>
                         </div>
                     </div><!-- End Why Box -->
@@ -217,8 +272,14 @@
                                     <i class="bi bi-clipboard-data"></i>
                                     <h4>Kurikulum Pembelajaran</h4>
                                     <p>Kurikulum yang digunakan adalah
-                                        <a href="https://ayoguruberbagi.kemdikbud.go.id/rpp/modul-ajar-paud-tk-ra-kurikulum-merdeka-2022" target="_blank" style="color: grey" aria-label="go to website">Kurikulum Merdeka
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15%" height="15%" viewBox="0 0 256 256"><path fill="currentColor" d="M224 104a8 8 0 0 1-16 0V59.32l-66.33 66.34a8 8 0 0 1-11.32-11.32L196.68 48H152a8 8 0 0 1 0-16h64a8 8 0 0 1 8 8Zm-40 24a8 8 0 0 0-8 8v72H48V80h72a8 8 0 0 0 0-16H48a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-72a8 8 0 0 0-8-8Z"/></svg>
+                                        <a href="https://ayoguruberbagi.kemdikbud.go.id/rpp/modul-ajar-paud-tk-ra-kurikulum-merdeka-2022"
+                                            target="_blank" style="color: grey" aria-label="go to website">Kurikulum
+                                            Merdeka
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15%" height="15%"
+                                                viewBox="0 0 256 256">
+                                                <path fill="currentColor"
+                                                    d="M224 104a8 8 0 0 1-16 0V59.32l-66.33 66.34a8 8 0 0 1-11.32-11.32L196.68 48H152a8 8 0 0 1 0-16h64a8 8 0 0 1 8 8Zm-40 24a8 8 0 0 0-8 8v72H48V80h72a8 8 0 0 0 0-16H48a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-72a8 8 0 0 0-8-8Z" />
+                                            </svg>
                                         </a> sejak tahun 2023
                                     </p>
                                 </div>
@@ -229,9 +290,14 @@
                                     <i class="bi bi-inboxes"></i>
                                     <h4>Model Pembelajaran</h4>
                                     <p>Model pembelajaran yang digunakan adalah pembelajaran berbasis
-                                        <a href="https://www.paud.id/4-model-pembelajaran-paud-pembelajaran-inovatif" target="_blank" style="color: grey" aria-label="go to website">kelompok
+                                        <a href="https://www.paud.id/4-model-pembelajaran-paud-pembelajaran-inovatif"
+                                            target="_blank" style="color: grey" aria-label="go to website">kelompok
                                             {{-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="color: grey"><path d="M16 8v7.1L13.9 13l-4.1 3.9L7 14l4.1-3.9L8.9 8H16M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2m2 0h14v14H5V5Z"/></svg> --}}
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15%" height="15%" viewBox="0 0 256 256"><path fill="currentColor" d="M224 104a8 8 0 0 1-16 0V59.32l-66.33 66.34a8 8 0 0 1-11.32-11.32L196.68 48H152a8 8 0 0 1 0-16h64a8 8 0 0 1 8 8Zm-40 24a8 8 0 0 0-8 8v72H48V80h72a8 8 0 0 0 0-16H48a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-72a8 8 0 0 0-8-8Z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15%" height="15%"
+                                                viewBox="0 0 256 256">
+                                                <path fill="currentColor"
+                                                    d="M224 104a8 8 0 0 1-16 0V59.32l-66.33 66.34a8 8 0 0 1-11.32-11.32L196.68 48H152a8 8 0 0 1 0-16h64a8 8 0 0 1 8 8Zm-40 24a8 8 0 0 0-8 8v72H48V80h72a8 8 0 0 0 0-16H48a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-72a8 8 0 0 0-8-8Z" />
+                                            </svg>
                                         </a>
                                     </p>
                                 </div>
@@ -371,57 +437,7 @@
                                 </p>
                             </div><!-- Menu Item -->
 
-                            {{-- <div class="col-lg-4 menu-item">
-                                <a href="{{asset("prestasi/prestasi-ortu.jpg")}}" class="glightbox"><img
-                                        src="{{asset("prestasi/prestasi-ortu.jpg")}}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Lomba Mewarnai</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $5.95
-                                </p>
-                            </div><!-- Menu Item --> --}}
 
-                            {{-- <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Eos Luibusdam</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $12.95
-                                </p>
-                            </div><!-- Menu Item --> --}}
-
-                            {{-- <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Eos Luibusdam</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $12.95
-                                </p>
-                            </div><!-- Menu Item --> --}}
-
-                            {{-- <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Laboriosam Direva</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $9.95
-                                </p>
-                            </div><!-- Menu Item --> --}}
 
                         </div>
                     </div><!-- End Starter Menu Content -->
@@ -516,185 +532,6 @@
                         </div>
                     </div><!-- End Breakfast Menu Content -->
 
-                    {{-- <div class="tab-pane fade" id="menu-lunch">
-
-                        <div class="tab-header text-center">
-                            <p>Menu</p>
-                            <h3>Lunch</h3>
-                        </div>
-
-                        <div class="row gy-5">
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Magnam Tiste</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $5.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Aut Luia</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $14.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Est Eligendi</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $8.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Eos Luibusdam</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $12.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Eos Luibusdam</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $12.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Laboriosam Direva</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $9.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                        </div>
-                    </div><!-- End Lunch Menu Content --> --}}
-
-                    {{-- <div class="tab-pane fade" id="menu-dinner">
-
-                        <div class="tab-header text-center">
-                            <p>Menu</p>
-                            <h3>Dinner</h3>
-                        </div>
-
-                        <div class="row gy-5">
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Magnam Tiste</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $5.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Aut Luia</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $14.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Est Eligendi</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $8.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Eos Luibusdam</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $12.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Eos Luibusdam</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $12.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                        src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Laboriosam Direva</h4>
-                                <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
-                                </p>
-                                <p class="price">
-                                    $9.95
-                                </p>
-                            </div><!-- Menu Item -->
-
-                        </div>
-                    </div><!-- End Dinner Menu Content --> --}}
 
                 </div>
 
@@ -717,11 +554,13 @@
                             <div class="testimonial-item">
                                 <div class="row gy-4 justify-content-center">
                                     <div class="col-lg-6 text-center">
-                                        <img src="{{asset('photo/review5.png')}}" class="img-fluid cover-img" alt="">
+                                        <img src="{{ asset('photo/review5.png') }}" class="img-fluid cover-img"
+                                            alt="">
                                     </div>
-                                    
+
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{asset('photo/review5.png')}}" class="img-fluid cover-cover-img" alt="">
+                                        <img src="{{ asset('photo/review5.png') }}" class="img-fluid cover-cover-img"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -735,9 +574,12 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Menurut saya, TK Tunas Karya Kumai memiliki fasilitas yang cukup bagus, 
-                                                tingkat keamanan yang baik, untuk prestasi siswa dalam hal lomba mewarnai juga sudah diikuti, 
-                                                selain itu untuk tenaga pendidik sekarang juga sudah ada generasi muda sebagai bunda baru yang bisa untuk mempercepat perkembangan TK Tunas Karya Kumai.
+                                                Menurut saya, TK Tunas Karya Kumai memiliki fasilitas yang cukup bagus,
+                                                tingkat keamanan yang baik, untuk prestasi siswa dalam hal lomba
+                                                mewarnai juga sudah diikuti,
+                                                selain itu untuk tenaga pendidik sekarang juga sudah ada generasi muda
+                                                sebagai bunda baru yang bisa untuk mempercepat perkembangan TK Tunas
+                                                Karya Kumai.
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
                                             <h3>Mei Andayani, S.Pd</h3>
@@ -753,10 +595,12 @@
                                     </div>
 
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{ asset('photo/kepalasekolah.jpeg') }}" class="img-fluid testimonial-img" alt="">
+                                        <img src="{{ asset('photo/kepalasekolah.jpeg') }}"
+                                            class="img-fluid testimonial-img" alt="">
                                         <br>
                                         <div class="btn btn-danger">
-                                            <a href="{{asset('photo/kepalasekolah.mp4')}}" class="glightbox play-btn" style="color: white">
+                                            <a href="{{ asset('photo/kepalasekolah.mp4') }}"
+                                                class="glightbox play-btn" style="color: white">
                                                 <i class="bi bi-play-circle" style="color: white"></i>
                                                 <span>
                                                     watch video
@@ -797,10 +641,12 @@
                                     </div>
 
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{ asset('photo/testimoni2.jpeg') }}" class="img-fluid testimonial-img" alt="">
+                                        <img src="{{ asset('photo/testimoni2.jpeg') }}"
+                                            class="img-fluid testimonial-img" alt="">
                                         <br>
                                         <div class="btn btn-danger">
-                                            <a href="{{asset('photo/vidtest2.mp4')}}" class="glightbox play-btn" style="color: white">
+                                            <a href="{{ asset('photo/vidtest2.mp4') }}" class="glightbox play-btn"
+                                                style="color: white">
                                                 <i class="bi bi-play-circle" style="color: white"></i>
                                                 <span>
                                                     watch video
@@ -821,8 +667,10 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Menurut saya, TK Tunas Karya Kumai sangat bagus dalam hal fasilitas karena ada mainan dan pagar yang tinggi,
-                                                untuk hal prestasi juga sering mengikuti dan memenangkan lomba mewarnai, ruang kelas juga bagus karena gedungnya berdiri dengan kokoh,
+                                                Menurut saya, TK Tunas Karya Kumai sangat bagus dalam hal fasilitas
+                                                karena ada mainan dan pagar yang tinggi,
+                                                untuk hal prestasi juga sering mengikuti dan memenangkan lomba mewarnai,
+                                                ruang kelas juga bagus karena gedungnya berdiri dengan kokoh,
                                                 halamannya sangat bersih serta dalam hal sanitasi juga sangat bagus.
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
@@ -841,16 +689,18 @@
                                     </div>
 
                                     <div class="col-lg-2 text-center">
-                                        <img src="{{ asset('photo/ccc.jpeg') }}" class="img-fluid testimonial-img" alt="">
+                                        <img src="{{ asset('photo/ccc.jpeg') }}" class="img-fluid testimonial-img"
+                                            alt="">
                                         <br>
                                         <div class="btn btn-danger">
-                                            <a href="{{asset('photo/video.mp4')}}" class="glightbox play-btn" style="color: white">
+                                            <a href="{{ asset('photo/video.mp4') }}" class="glightbox play-btn"
+                                                style="color: white">
                                                 <i class="bi bi-play-circle" style="color: white"></i>
                                                 <span>
                                                     watch video
                                                 </span>
                                             </a>
-                                        </div>    
+                                        </div>
                                     </div>
 
                                 </div>
@@ -878,34 +728,30 @@
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide event-item d-flex flex-column justify-content-end"
-                            style="background-image: url({{asset('photo/ppdb.jpg')}})">
+                            style="background-image: url({{ asset('photo/ppdb.jpg') }})">
                             <h3>2023/2024</h3>
                             <div class="price align-self-start">Penerimaan Peserta Didik Baru</div>
                             <p class="description">
-                               Tahun 2023 ini <strong><a href="https://www.instagram.com/tktunaskaryakumai/" target="blank" style="color: white">TK Tunas Karya Kumai</a></strong> membuka pendataran untuk peserta didik baru tahun ajaran 2023/2024
-                               yang akan dibuka pada bulan Juni mendatang. 
+                                Tahun 2023 ini <strong><a href="https://www.instagram.com/tktunaskaryakumai/"
+                                        target="blank" style="color: white">TK Tunas Karya Kumai</a></strong> membuka
+                                pendataran untuk peserta didik baru tahun ajaran 2023/2024
+                                yang akan dibuka pada bulan Juni mendatang.
                             </p>
                         </div><!-- End Event item -->
 
                         <div class="swiper-slide event-item d-flex flex-column justify-content-end"
-                            style="background-image: url({{asset('photo/event1.jpg')}})">
+                            style="background-image: url({{ asset('photo/event1.jpg') }})">
                             <h3>15 Agustus 2022</h3>
                             <div class="price align-self-start">Kunjungan Puskesmas Kumai</div>
                             <p class="description">
-                                Kunjungan yang dilakukan oleh tenaga kesehatan dari <strong><a href="https://www.instagram.com/puskesmas_kumai/" target="blank" style="color: white">Puskesmas Kumai</a></strong> 
-                                dalam rangka pemberian vitamin A dan obat cacing untuk peserta didik TK Tunas Karya Kumai.
+                                Kunjungan yang dilakukan oleh tenaga kesehatan dari <strong><a
+                                        href="https://www.instagram.com/puskesmas_kumai/" target="blank"
+                                        style="color: white">Puskesmas Kumai</a></strong>
+                                dalam rangka pemberian vitamin A dan obat cacing untuk peserta didik TK Tunas Karya
+                                Kumai.
                             </p>
                         </div><!-- End Event item -->
 
-                        {{-- <div class="swiper-slide event-item d-flex flex-column justify-content-end"
-                            style="background-image: url(assets/img/events-3.jpg)">
-                            <h3>Birthday Parties</h3>
-                            <div class="price align-self-start">$499</div>
-                            <p class="description">
-                                Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam.
-                                Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
-                            </p>
-                        </div><!-- End Event item --> --}}
 
                     </div>
                     <div class="swiper-pagination"></div>
@@ -924,32 +770,39 @@
                 </div>
 
                 <div class="row gy-4">
+                    {{-- @php
+                    $no=$pegawais->FirstItem()
+                    @endphp --}}
+                    @foreach ($pegawais as $sekolah)
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="chef-member">
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="chef-member">
-
-                            <div class="member-img">
-                                <img src="{{asset('photo/muslim.png')}}" class="img-fluid" alt="">
-                                {{-- <div class="social">
+                                <div class="member-img">
+                                    <img src="{{asset('storage/photos')}}/{{$sekolah->foto_profil}}"
+                                        class="img-fluid" alt="">
+                                    {{-- <div class="social">
                                     <a href="#"><i class="bi bi-twitter"></i></a>
                                     <a href="#"><i class="bi bi-facebook"></i></a>
                                     <a href="#"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-linkedin"></i></a>
                                 </div> --}}
+                                </div>
+
+                                <div class="member-info">
+                                    <h4>Syarwina, S.Pd.AUD</h4>
+                                    <span>Guru Kelas A</span>
+                                </div>
+
                             </div>
+                        </div><!-- End Chefs Member -->
+                    @endforeach
 
-                            <div class="member-info">
-                                <h4>Syarwina, S.Pd.AUD</h4>
-                                <span>Guru Kelas A</span>
-                            </div>
-
-                        </div>
-                    </div><!-- End Chefs Member -->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="200">
                         <div class="chef-member">
                             <div class="member-img">
-                                <img src="{{asset('photo/muslim.png')}}" class="img-fluid" alt="">
+                                <img src="{{ asset('photo/muslim.png') }}" class="img-fluid" alt="">
                                 {{-- <div class="social">
                                     <a href="#"><i class="bi bi-twitter"></i></a>
                                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -966,18 +819,21 @@
                         </div>
                     </div><!-- End Chefs Member -->
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="300">
                         <div class="chef-member">
                             <div class="member-img">
-                                <img src="{{asset('photo/muslim.png')}}" class="img-fluid" alt="">
+                                <img src="{{ asset('photo/muslim.png') }}" class="img-fluid" alt="">
                                 <div class="social">
                                     {{-- <a href="#"><i class="bi bi-twitter"></i></a> --}}
-                                    <a href="https://www.facebook.com/imalizafathonah.anwari?mibextid=ZbWKwL" target="blank"><i class="bi bi-facebook"></i></a>
-                                    <a href="https://www.instagram.com/lizasahudi/" target="blank"><i class="bi bi-instagram"></i></a>
+                                    <a href="https://www.facebook.com/imalizafathonah.anwari?mibextid=ZbWKwL"
+                                        target="blank"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://www.instagram.com/lizasahudi/" target="blank"><i
+                                            class="bi bi-instagram"></i></a>
                                     {{-- <a href="#"><i class="bi bi-linkedin"></i></a> --}}
                                 </div>
                             </div>
-                            
+
                             <div class="member-info">
                                 <h4>Imaliza Fathonah Anwari</h4>
                                 <span>GURU PENDAMPING</span>
@@ -1001,26 +857,34 @@
 
                 <div class="row g-0">
 
-                    <div class="col-lg-4 reservation-img" style="background-image: url({{asset('photo/cm1.png')}});" data-aos="zoom-out" data-aos-delay="200"></div>
+                    <div class="col-lg-4 reservation-img"
+                        style="background-image: url({{ asset('photo/cm1.png') }});" data-aos="zoom-out"
+                        data-aos-delay="200"></div>
 
                     <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
 
-                        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form"
+                            data-aos="fade-up" data-aos-delay="100">
 
                             <div class="row gy-4">
-                                
+
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                    <input type="text" name="nama" class="form-control" id="nama"
+                                        placeholder="Nama" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars">
                                     <div class="validate"></div>
                                 </div>
 
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
                                     <div class="validate"></div>
                                 </div>
 
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="number" class="form-control" name="nomor-hp" id="nomor-hp" placeholder="No. Hp" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                                    <input type="text" class="form-control" name="nomor-hp" id="nomor-hp"
+                                        placeholder="No. Hp" data-rule="minlen:1"
+                                        data-msg="Please enter at least 1 chars">
                                     <div class="validate"></div>
                                 </div>
 
@@ -1051,7 +915,7 @@
 
         <!-- ======= Galeri Section ======= -->
         <section id="galeri" class="gallery section-bg">
-            
+
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
@@ -1061,14 +925,38 @@
 
                 <div class="gallery-slider swiper">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri1.png')}}"><img src="{{asset('gallery/galeri1.png')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri2.png')}}"><img src="{{asset('gallery/galeri2.png')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri3.jpg')}}"><img src="{{asset('gallery/galeri3.jpg')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri4.jpg')}}"><img src="{{asset('gallery/galeri4.jpg')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri5.jpg')}}"><img src="{{asset('gallery/galeri5.jpg')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri6.jpg')}}"><img src="{{asset('gallery/galeri6.jpg')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri7.jpg')}}"><img src="{{asset('gallery/galeri7.jpg')}}" class="img-fluid" alt=""></a></div>
-                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{asset('gallery/galeri8.png')}}"><img src="{{asset('gallery/galeri8.png')}}" class="img-fluid" alt=""></a></div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri1.png') }}"><img
+                                    src="{{ asset('gallery/galeri1.png') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri2.png') }}"><img
+                                    src="{{ asset('gallery/galeri2.png') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri3.jpg') }}"><img
+                                    src="{{ asset('gallery/galeri3.jpg') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri4.jpg') }}"><img
+                                    src="{{ asset('gallery/galeri4.jpg') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri5.jpg') }}"><img
+                                    src="{{ asset('gallery/galeri5.jpg') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri6.jpg') }}"><img
+                                    src="{{ asset('gallery/galeri6.jpg') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri7.jpg') }}"><img
+                                    src="{{ asset('gallery/galeri7.jpg') }}" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                                href="{{ asset('gallery/galeri8.png') }}"><img
+                                    src="{{ asset('gallery/galeri8.png') }}" class="img-fluid" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -1220,7 +1108,7 @@
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
-                Designed by <a href="https://bootstrapmade.com/" target="blank">BootstrapMade</a> 
+                Designed by <a href="https://bootstrapmade.com/" target="blank">BootstrapMade</a>
                 Edited by Web & Programming <a href="https://lkpenter.com/" target="blank">Enter</a> | Kelompok 2
             </div>
         </div>

@@ -44,8 +44,9 @@ class PegawaiController extends Controller
         $filee = $request->file('foto_sertifikat');
         $sertif = $filee->hashName();
         $filee->store('docs','public');
-
+        // dd($request);
         Pegawai::create([
+            'id_sekolah'=> 1,
             'nama_pegawai'=>$request->nama_pegawai,
             'tempat_lahir_pegawai'=>$request->tempat_lahir_pegawai,
             'tanggal_lahir_pegawai'=>$request->tanggal_lahir_pegawai,
