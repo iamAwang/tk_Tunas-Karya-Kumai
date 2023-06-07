@@ -70,6 +70,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Kelas</label>
+
                 <input
                     type="text"
                     class="form-control"
@@ -82,7 +83,7 @@
             <div class="form-group">
                 <label for="exampleInputPassword1">Wali Kelas</label>
                 <select class="form-control" name="id_pegawai" value="<?php if(@$edit!=null) printf($edit->id_pegawai)?>">
-                    <option selected>Wali Kelas</option>
+                   
                     @foreach ($pegawais as $pegawai)
                         @if (@$edit->pegawai->id == $pegawai->id)
                     <option value="{{$pegawai->id}}" selected>{{$pegawai->nama_pegawai}}</option>

@@ -790,8 +790,8 @@
                                 </div>
 
                                 <div class="member-info">
-                                    <h4>Syarwina, S.Pd.AUD</h4>
-                                    <span>Guru Kelas A</span>
+                                    <h4>{{$sekolah->nama_pegawai}}</h4>
+                                    <span></span>
                                 </div>
 
                             </div>
