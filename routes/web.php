@@ -50,3 +50,6 @@ Route::get('/cerate-sertifikat',[SertifikatController::class, 'create'])->name('
 Route::post('/store-sertifikat',[SertifikatController::class, 'store'])->name('storeSertifikat');
 
 Route::get('/upload-galeri',[UploadController::class, 'create'])->name('uploadGaleri');
+
+Route::post('/kirim-pesans',[UploadController::class, 'create_pesan'])->name('uploadPesan');
+Route::get('/success-pesan',[UploadController::class,'view_success'])->name('pesanSuccess');

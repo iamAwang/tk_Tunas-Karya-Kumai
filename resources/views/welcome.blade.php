@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -223,7 +224,7 @@
                             </ul>
 
                             <div class="position-relative mt-4">
-                                <img src="{{ asset('photo/profil3.jpeg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('photo/kepalasekolah.png') }}" class="img-fluid" alt="">
                                 <a href="https://www.youtube.com/watch?v=GfGTglVtkvI" class="glightbox play-btn"></a>
                             </div>
                         </div>
@@ -863,28 +864,28 @@
 
                     <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
 
-                        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form"
+                        <form action="{{route("uploadPesan")}}" method="post" role="form" class="php-email-form"
                             data-aos="fade-up" data-aos-delay="100">
-
+                            @csrf
                             <div class="row gy-4">
 
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="text" name="nama" class="form-control" id="nama"
+                                    <input type="text" name="nama" class="form-control" 
                                         placeholder="Nama" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars">
+                                       >
                                     <div class="validate"></div>
                                 </div>
 
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
+                                    <input type="email" class="form-control" name="email" 
+                                    placeholder="Email" >
                                     <div class="validate"></div>
                                 </div>
 
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="text" class="form-control" name="nomor-hp" id="nomor-hp"
-                                        placeholder="No. Hp" data-rule="minlen:1"
-                                        data-msg="Please enter at least 1 chars">
+                                    <input type="text" class="form-control" name="nomorHp" 
+                                        placeholder="No. Hp" 
+                                       >
                                     <div class="validate"></div>
                                 </div>
 
@@ -905,7 +906,6 @@
                             <div class="text-center"><button type="submit">Kirim</button></div>
 
                         </form>
-
                     </div><!-- End Reservation Form -->
 
                 </div>

@@ -60,26 +60,12 @@
                 />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Wali Kelas</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Jabatan Pegawai"
-                    name="jabatan"
-                    value="<?php if(@$edit!=null) printf($edit->jabatan)?>"
-                    
-                />
-            </div>
-            <select class="form-control" name="wali kelas" value="<?php if(@$edit!=null) printf($edit->id_pegawai)?>">
-                   
-                
-             
+            <label for="exampleInputPassword1">Wali kelas</label>
+            <select class="form-control" name="wali kelas" value="">
                 <option value="" selected>B</option>
-            
                 <option value="">A</option>
-            
-               
             </select>
+            </div>
             <div class="form-group">
                 <label>Upload Foto</label>
                 <input type="file" name="foto_profil" class="form-control">
