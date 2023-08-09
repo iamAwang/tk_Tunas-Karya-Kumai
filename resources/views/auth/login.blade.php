@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }}</title>
+    <title>ADMIN Tk Tunas Karya Kumai</title>
+    <link href="{{ asset('photo/ppp.png') }}" rel="icon">
+    <link href="{{ asset('photo/ppp.png') }}" rel="apple-touch-icon">
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -15,10 +17,33 @@
           @vite(['resources/css/app.css'])
 
 </head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+    }
+    body {
+        min-height: 100vh;
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+            ),
+            url("photo/all.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .card-body{
+        border-radius: 10px;
+    }
+</style>
+
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
+        <a href="{{ url('/') }}"><b  style="color: white">ADMIN</b></a>
     </div>
     <!-- /.login-logo -->
 

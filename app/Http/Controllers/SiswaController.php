@@ -17,8 +17,8 @@ class SiswaController extends Controller
     }
 
     public function create(){
-        $pegawais=Pegawai::all();
-        return view('form_siswa',compact(['pegawais']));
+        $id_pegawais = Pegawai::all();
+        return view('form_siswa',compact(['id_pegawais']));
     }
 
     public function store(Request $request){
@@ -38,8 +38,9 @@ class SiswaController extends Controller
 
     public function edit($id){
         $edit=Siswa::find($id);
-        $pegawais=Pegawai::all();
-        return view('form_siswa',compact(['edit','pegawais']));
+        // $id_pegawais=Pegawai::all();
+        return view('form_siswa',compact(['edit']));
+        // return view('form_siswa',compact(['edit','id_pegawais']));
     }
 
     public function update(Request $request,$id){
@@ -52,7 +53,7 @@ class SiswaController extends Controller
         $siswa->nama_orangtua=$request->nama_orangtua;
         $siswa->no_handphone_orangtua=$request->no_handphone_orangtua;
         $siswa->kelas=$request->kelas;
-        $siswa->id_pegawai=$request->id_pegawai;
+        // $siswa->id_pegawai=$request->id_pegawai;
         $siswa->save();
         
         return redirect('siswa');

@@ -7,13 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pesan extends Model
 {
-    protected $fillable = [
-        'name',
-        'email',
-        'phone',
-        'pesan',
-        'id_sekolah'
-    ];
-    
     protected $table = 'pesans';
+    protected $fillable = [
+        'nama',
+        'email',
+        'no_handphone',
+        'pesan'
+    ];    
 }

@@ -29,6 +29,9 @@
             </li>
         </ul>
 
+        <button type="submit" class="btn btn-danger" style="float: left"><a href="{{route('welcomes')}}" style="text-decoration: none; color: white">Kembali</a></button>
+
+
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">

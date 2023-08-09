@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Tk Kumai</title>
+    <title>Tk Tunas Karya Kumai</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -30,6 +30,15 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+
+    {{-- Toastr --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <!-- =======================================================
   * Template Name: Yummy
@@ -146,7 +155,31 @@
                     <p data-aos="fade-up" data-aos-delay="100">TK Tunas Karya Kumai berdiri pada tahun 1985
                     </p>
                     <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#feedback" class="btn-book-a-table">Feedback</a>
+                        {{-- <a href="#feedback" class="btn-book-a-table">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-4.586l-2.707 2.707a1 1 0 0 1-1.414 0L8.586 19H4a2 2 0 0 1-2-2V6zm18 0H4v11h5a1 1 0 0 1 .707.293L12 19.586l2.293-2.293A1 1 0 0 1 15 17h5V6zM6 9.5a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1z"/></svg>
+                            Feedback
+                        </a> --}}
+
+                        <a href="#feedback" class="btn btn-danger" style="border-radius:50px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-4.586l-2.707 2.707a1 1 0 0 1-1.414 0L8.586 19H4a2 2 0 0 1-2-2V6zm18 0H4v11h5a1 1 0 0 1 .707.293L12 19.586l2.293-2.293A1 1 0 0 1 15 17h5V6zM6 9.5a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1z"/></svg>Feedback
+                        </a>
+
+                        <a href="{{url('/aboutUs_pdf')}}" class="btn btn-info" style="border-radius:50px; margin-left:5px; color:white" target="blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                                <g fill="none">
+                                    <path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/>
+                                    <path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2Zm0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16Zm0 12a1 1 0 1 1 0 2a1 1 0 0 1 0-2Zm0-9.5a3.625 3.625 0 0 1 1.348 6.99a.837.837 0 0 0-.305.201c-.044.05-.051.114-.05.18L13 14a1 1 0 0 1-1.993.117L11 14v-.25c0-1.153.93-1.845 1.604-2.116a1.626 1.626 0 1 0-2.229-1.509a1 1 0 1 1-2 0A3.625 3.625 0 0 1 12 6.5Z"/>
+                                </g>
+                            </svg>About Us
+                        </a>
+                        
+                        <a href="/premium_pdf" class="btn btn-warning" style="border-radius:50px; margin-left:5px; color:white" target="blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 18h14M5 14h14l1-9l-4 3l-4-5l-4 5l-4-3l1 9Z"/>
+                            </svg>Premium
+                        </a>
+
                         {{-- <video >
                             <source src="{{asset("photo/kepalasekolah.mp4")}}" class="glightbox btn-watch-video d-flex align-items-center" type="video/mp4">
                                 <i class="bi bi-play-circle"></i><span>Watch Video</span>
@@ -155,15 +188,35 @@
                             class="glightbox btn-watch-video d-flex align-items-center">
                             <i class="bi bi-play-circle"></i><span>Watch Video</span>
                         </a> --}}
-                        <a href=""
+
+                        {{-- <a href="{{url('/aboutus_pdf')}}"
                             class="glightbox btn-watch-video d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100">
                                 <path id="gisGlobeUsers0" fill="currentColor" stroke-dashoffset="188.976" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.644" d="M49.947 0C22.354.03 0 22.406 0 50a50 50 0 0 0 20.404 40.21c-.265-2.031-.213-4.128.117-6.202a45.22 45.22 0 0 1-8.511-9.877h12.445c1.182-1.845 2.4-3.67 4.525-5c-1.245-5.1-2.006-10.716-2.146-16.631h1.346a18.653 18.653 0 0 1 1.93-5h-3.243c.212-5.935 1.043-11.554 2.363-16.63H47.5v8.888a13.75 13.75 0 0 1 5 1.804V30.87h19.195c.26.997.495 2.02.715 3.057a19.769 19.769 0 0 1 5.084-.117a76.416 76.416 0 0 0-.639-2.94h13.89a44.747 44.747 0 0 1 3.965 14.028c.58 5.049.591 10.975-1.246 16.771a45.007 45.007 0 0 1-2.286 6.478c1.128 1.187 2.494 2.309 3.867 3.454A50 50 0 0 0 100 50c0-27.614-22.386-50-50-50ZM52.5 5.682c5.268.896 10.302 5.236 14.268 12.437c1.278 2.321 2.42 4.927 3.408 7.75H52.5Zm-5 .197v19.99H30.75c.988-2.823 2.13-5.429 3.408-7.75C37.89 11.341 42.571 7.102 47.5 5.88ZM35.98 7.232c-2.324 2.352-4.41 5.22-6.203 8.475c-1.68 3.05-3.125 6.467-4.312 10.162H12.01c5.535-8.706 13.975-15.37 23.97-18.637Zm29.41.463c9.398 3.413 17.32 9.868 22.6 18.174H75.455c-1.184-3.695-2.627-7.112-4.307-10.162c-1.676-3.045-3.613-5.749-5.757-8.012ZM9.257 30.87h14.808c-1.245 5.162-2.008 10.76-2.203 16.631H5.072a44.79 44.79 0 0 1 4.184-16.63ZM5.072 52.5h16.762c.129 5.856.82 11.454 1.994 16.63H9.256A44.79 44.79 0 0 1 5.072 52.5Z" color="currentColor"/>
                                 <path id="gisGlobeUsers1" fill="currentColor" fill-opacity="1" stroke="none" stroke-dasharray="none" stroke-dashoffset="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-opacity="1" stroke-width="3.621" d="M76 37.769c-8.285 0-15 6.716-15 15c0 8.284 6.715 15 15 15c8.283 0 15-6.716 15-15c0-8.284-6.717-15-15-15zm0 32.223c-16.57 0-24 7.431-24 24v2c.075 3.94 1.817 4.056 5.5 4h37c4.695-.004 5.532.005 5.5-4v-2c0-16.569-7.432-24-24-24z" opacity="1" vector-effect="none"/>
                                 <path id="gisGlobeUsers2" fill="currentColor" fill-opacity="1" stroke="none" stroke-dasharray="none" stroke-dashoffset="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-opacity="1" stroke-width="2.966" d="M44 43.39c-6.787 0-12.291 5.504-12.291 12.292c0 6.787 5.504 12.289 12.291 12.289c6.787 0 12.29-5.502 12.29-12.29c0-6.787-5.503-12.29-12.29-12.29zm0 26.401c-13.575 0-19.664 6.09-19.664 19.664v1.639c.062 3.228 1.489 3.323 4.506 3.277h19.123c-.488-8.088 1.901-16.678 7.851-22.139c-3.012-1.646-6.925-2.441-11.816-2.441z" opacity="1" vector-effect="none"/>
                             </svg><span>About Us</span>
-                        </a>
+                        </a> --}}
                     </div>
+
+                    {{-- <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <a href="{{url('/aboutus_pdf')}}" class="btn btn-info" style="border-radius:50px; margin-top:10px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none">
+                                    <path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/>
+                                    <path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2Zm0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16Zm0 12a1 1 0 1 1 0 2a1 1 0 0 1 0-2Zm0-9.5a3.625 3.625 0 0 1 1.348 6.99a.837.837 0 0 0-.305.201c-.044.05-.051.114-.05.18L13 14a1 1 0 0 1-1.993.117L11 14v-.25c0-1.153.93-1.845 1.604-2.116a1.626 1.626 0 1 0-2.229-1.509a1 1 0 1 1-2 0A3.625 3.625 0 0 1 12 6.5Z"/>
+                                </g>
+                            </svg>About Us
+                        </a>
+                    </div>                    
+
+                    <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <a href="/premium_pdf" class="btn btn-warning" style="border-radius:50px; margin-top:10px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 18h14M5 14h14l1-9l-4 3l-4-5l-4 5l-4-3l1 9Z"/>
+                            </svg>Premium
+                        </a>
+                    </div> --}}
 
                     {{-- <video class="d-flex" data-aos="fade-up" data-aos-delay="200">
                         <source src="{{asset("photo/kepalasekolah.mp4")}}" class="glightbox btn-watch-video d-flex align-items-center" type="video/mp4">
@@ -375,6 +428,187 @@
         <!-- ======= Profil Section ======= -->
         <section id="profil" class="menu">
             <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h2>PROFIL</h2>
+                    <p>
+                        <span>
+                            PROFIL
+                        </span>
+                             TK TUNAS KARYA KUMAI
+                    </p>
+                </div>
+
+                <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+                            <h4>
+                                Prestasi
+                            </h4>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+                            <h4>
+                                Fasilitas
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tab-pane active show" id="menu-starters">
+                        <div class="tab-header text-center">
+                            <p>
+                                SISWA
+                            </p>
+                            <h3>
+                                PRESTASI
+                            </h3>
+                        </div>
+
+                        <div class="row gy-5">
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('prestasi/prestasi.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('prestasi/prestasi.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        LOMBA MEWARNAI
+                                    </h4>
+                                    <P class="ingredients">
+                                        diadakan oleh
+                                    </P>
+                                    <p class="price">
+                                        JAUZAA STATION
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('prestasi/prestasi2.png') }}" class="glightbox">
+                                    <img src="{{ asset('prestasi/prestasi2.png') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        LOMBA MEWARNAI
+                                    </h4>
+                                    <P class="ingredients">
+                                        tingkat
+                                    </P>
+                                    <p class="price">
+                                        KELOMPOK A
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="menu-breakfast">
+                        <div class="tab-header text-center">
+                            <p>
+                                SEKOLAH
+                            </p>
+                            <h3>
+                                FASILITAS
+                            </h3>
+                        </div>
+
+                        <div class="row gy-5">
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('fasilitas/kelass.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/kelass.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        RUANG KELAS
+                                    </h4>
+                                    <P class="ingredients">
+                                        jumlah ruang kelas
+                                    </P>
+                                    <p class="price">
+                                        2
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('fasilitas/mainan.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/mainan.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        MAINAN
+                                    </h4>
+                                    <P class="ingredients">
+                                        jumlah mainan
+                                    </P>
+                                    <p class="price">
+                                        8
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('fasilitas/komputer.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/komputer.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        KOMPUTER
+                                    </h4>
+                                    <P class="ingredients">
+                                        jumlah komputer
+                                    </P>
+                                    <p class="price">
+                                        1
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('fasilitas/p3k.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/p3k.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        KOTAK P3K
+                                    </h4>
+                                    <P class="ingredients">
+                                        jumlah kotak p3k
+                                    </P>
+                                    <p class="price">
+                                        2
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('fasilitas/toilet.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/toilet.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        TOILET
+                                    </h4>
+                                    <P class="ingredients">
+                                        jumlah toilet
+                                    </P>
+                                    <p class="price">
+                                        1
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 menu-item">
+                                <a href="{{ asset('fasilitas/keran.jpg') }}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/keran.jpg') }}" alt="" class="menu-img img-fluid">
+                                    <h4>
+                                        KERAN AIR
+                                    </h4>
+                                    <P class="ingredients">
+                                        jumlah keran air
+                                    </P>
+                                    <p class="price">
+                                        3
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {{-- <section id="profil" class="menu">
+            <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
                     <h2>PROFIL</h2>
@@ -394,21 +628,8 @@
                             <h4>Fasilitas</h4>
                         </a>
                     </li><!-- End tab nav item -->
-
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
-                            <h4>Lunch</h4>
-                        </a>
-                    </li><!-- End tab nav item --> --}}
-
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-                            <h4>Dinner</h4>
-                        </a>
-                    </li><!-- End tab nav item --> --}}
-
                 </ul>
-
+                
                 <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
 
                     <div class="tab-pane fade active show" id="menu-starters">
@@ -433,21 +654,6 @@
                                 </p>
                             </div><!-- Menu Item -->
 
-                            <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('prestasi/prestasi2.png') }}" class="glightbox"><img
-                                        src="{{ asset('prestasi/prestasi2.png') }}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Lomba Mewarnai</h4>
-                                <p class="ingredients">
-                                    tingkat
-                                </p>
-                                <p class="price">
-                                    KELOMPOK A
-                                </p>
-                            </div><!-- Menu Item -->
-
-
-
                         </div>
                     </div><!-- End Starter Menu Content -->
 
@@ -461,80 +667,14 @@
                         <div class="row gy-5">
 
                             <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('fasilitas/kelass.jpg') }}" class="glightbox"><img
-                                        src="{{ asset('fasilitas/kelass.jpg') }}" class="menu-img img-fluid"
-                                        alt=""></a>
+                                <a href="{{asset('fasilitas/kelass.jpg')}}" class="glightbox">
+                                    <img src="{{ asset('fasilitas/kelass.jpg') }}" class="menu-img img-fluid" alt=""></a>
                                 <h4>Ruang Kelas</h4>
                                 <p class="ingredients">
                                     jumlah ruang kelas
                                 </p>
                                 <p class="price">
                                     2
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('fasilitas/mainan.jpg') }}" class="glightbox"><img
-                                        src="{{ asset('fasilitas/mainan.jpg') }}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Taman Bermain</h4>
-                                <p class="ingredients">
-                                    jumlah mainan
-                                </p>
-                                <p class="price">
-                                    8
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('fasilitas/p3k.jpg') }}" class="glightbox"><img
-                                        src="{{ asset('fasilitas/p3k.jpg') }}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Kotak P3K</h4>
-                                <p class="ingredients">
-                                    jumlah kotak p3k
-                                </p>
-                                <p class="price">
-                                    3
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('fasilitas/toilet.jpg') }}" class="glightbox"><img
-                                        src="{{ asset('fasilitas/toilet.jpg') }}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Toilet</h4>
-                                <p class="ingredients">
-                                    jumlah toilet
-                                </p>
-                                <p class="price">
-                                    1
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('fasilitas/keran.jpg') }}" class="glightbox"><img
-                                        src="{{ asset('fasilitas/keran.jpg') }}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Keran Air</h4>
-                                <p class="ingredients">
-                                    jumlah keran air
-                                </p>
-                                <p class="price">
-                                    3
-                                </p>
-                            </div><!-- Menu Item -->
-
-                            <div class="col-lg-4 menu-item">
-                                <a href="{{ asset('fasilitas/komputer.jpg') }}" class="glightbox"><img
-                                        src="{{ asset('fasilitas/komputer.jpg') }}" class="menu-img img-fluid"
-                                        alt=""></a>
-                                <h4>Komputer & Printer</h4>
-                                <p class="ingredients">
-                                    jumlah komputer & printer
-                                </p>
-                                <p class="price">
-                                    1
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -545,7 +685,9 @@
                 </div>
 
             </div>
-        </section><!-- End Profil Section -->
+        </section><!-- End Profil Section --> --}}
+
+        
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials section-bg">
@@ -782,42 +924,52 @@
                     {{-- @php
                     $no=$pegawais->FirstItem()
                     @endphp --}}
-                    @foreach ($pegawais as $sekolah)
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <div class="chef-member">
+                    {{-- @foreach ($pegawais as $sekolah) --}}
+                        {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" --}}
+                            {{-- data-aos-delay="100"> --}}
+                            {{-- <div class="chef-member"> --}}
 
-                                <div class="member-img">
-                                    <img src="{{asset('storage/photos')}}/{{$sekolah->foto_profil}}"
-                                        class="img-fluid" alt="">
+                                {{-- <div class="member-img"> --}}
+                                    {{-- <img src="{{asset('storage/photos')}}/{{$sekolah->foto_profil}}" --}}
+                                        {{-- class="img-fluid" alt=""> --}}
                                     {{-- <div class="social">
                                     <a href="#"><i class="bi bi-twitter"></i></a>
                                     <a href="#"><i class="bi bi-facebook"></i></a>
                                     <a href="#"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-linkedin"></i></a>
                                 </div> --}}
-                                </div>
+                                {{-- </div> --}}
 
-                                <div class="member-info">
-                                    <h4>{{$sekolah->nama_pegawai}}</h4>
-                                    <span></span>
-                                </div>
+                                {{-- <div class="member-info"> --}}
+                                    {{-- <h4>{{$sekolah->nama_pegawai}}</h4> --}}
+                                    {{-- <span></span> --}}
+                                {{-- </div> --}}
 
-                            </div>
-                        </div><!-- End Chefs Member -->
-                    @endforeach
+                            {{-- </div> --}}
+                        {{-- </div> --}}
+                        <!-- End Chefs Member -->
+                    {{-- @endforeach --}}
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="{{ asset('photo/muslim.png') }}" class="img-fluid" alt="">
-                                {{-- <div class="social">
-                                    <a href="#"><i class="bi bi-twitter"></i></a>
-                                    <a href="#"><i class="bi bi-facebook"></i></a>
-                                    <a href="#"><i class="bi bi-instagram"></i></a>
-                                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                                </div> --}}
+                            </div>
+
+                            <div class="member-info">
+                                <h4> Syarwina, S.Pd.AUD</h4>
+                                <span>GURU KELAS A</span>
+                            </div>
+
+                        </div>
+                    </div><!-- End Chefs Member -->
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="chef-member">
+                            <div class="member-img">
+                                <img src="{{ asset('photo/muslim.png') }}" class="img-fluid" alt="">
                             </div>
 
                             <div class="member-info">
@@ -872,8 +1024,7 @@
 
                     <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
 
-                        <form action="{{route("uploadPesan")}}" method="post" role="form" class="php-email-form"
-                            data-aos="fade-up" data-aos-delay="100">
+                        <form action="{{route("uploadPesan")}}" method="post" role="form" data-aos="fade-up" data-aos-delay="100" style="margin-left: 27px">
                             @csrf
                             <div class="row gy-4">
 
@@ -891,7 +1042,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="text" class="form-control" name="nomorHp" 
+                                    <input type="text" class="form-control" name="no_handphone" 
                                         placeholder="No. Hp" 
                                        >
                                     <div class="validate"></div>
@@ -900,18 +1051,18 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Masukan Anda"></textarea>
+                                <textarea class="form-control" name="pesan" rows="5" placeholder="Masukan Anda"></textarea>
                                 <div class="validate"></div>
                             </div>
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <div class="loading">Loading</div>
-                                <div class="error-message"></div>
+                                <div class="error-message">Maaf Pesan Anda Tidak Terkirim</div>
                                 <div class="sent-message">Masukkan Anda Telah Terkirim. Terima Kasih!
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="text-center"><button type="submit">Kirim</button></div>
+                            <div class="text-center"><button type="submit" class="btn btn-danger" style="margin-top: 40px; border-radius:50px">Kirim Pesan</button></div>
 
                         </form>
                     </div><!-- End Reservation Form -->
@@ -1124,10 +1275,12 @@
     </footer><!-- End Footer -->
     <!-- End Footer -->
 
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <div id="preloader">
 
-    <div id="preloader"></div>
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1139,6 +1292,18 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    {{-- Toastr --}}
+    <script>
+        @if(Session::has('success'))
+            toastr.options =
+            {
+                "closeButton":true,
+                "progressBar":true,
+            }
+            toastr.success("{{  session('success')  }}")
+        @endif
+    </script>
 
 </body>
 

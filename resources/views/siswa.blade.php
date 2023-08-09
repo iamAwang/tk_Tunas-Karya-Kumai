@@ -20,7 +20,7 @@
                     <th>Nama Orang Tua</th>
                     <th>No Handphone Orang Tua</th>
                     <th>Kelas</th>
-                    <th>Wali Kelas</th>
+                    {{-- <th>Wali Kelas</th> --}}
                     <th colspan="2">Aksi</th>
                 </tr>
             </thead>
@@ -29,7 +29,7 @@
                     $no=$siswas->FirstItem()
                 @endphp
                 @foreach ($siswas as $siswa)
-                <tr>
+                <tr style="text-align: center">
                     <td>{{$no}}</td>
                     <td>{{$siswa->nama_siswa}}</td>
                     <td>{{$siswa->tempat_lahir_siswa}}</td>
@@ -38,7 +38,7 @@
                     <td>{{$siswa->nama_orangtua}}</td>
                     <td>{{$siswa->no_handphone_orangtua}}</td>
                     <td>{{$siswa->kelas}}</td>
-                    <td>{{$siswa->pegawais->nama_pegawai}}</td>
+                    {{-- <td>{{$siswa->gurus->nama_pegawai}}</td> --}}
                     <td>
                         <button type="button" class="btn btn-block btn-warning">
                             <a href="{{route('editSiswa',$siswa->id)}}" style="text-decoration: none; color:white">

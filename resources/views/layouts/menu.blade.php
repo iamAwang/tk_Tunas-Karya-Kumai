@@ -16,15 +16,17 @@
         @endforeach
     @endauth --}}
 
+    @if(Auth::user()->id == '1')
     <a href="{{ route('Developer') }}" class="nav-link {{ Request::is('developer') ? 'active' : '' }}">
         <i class="nav-icon fas fa-code"></i>
         <p>Developer</p>
     </a>
+    @endif
 
-    <a href="{{ route('indexSekolah') }}" class="nav-link {{ Request::is('sekolah') ? 'active' : '' }}">
+    {{-- <a href="{{ route('indexSekolah') }}" class="nav-link {{ Request::is('sekolah') ? 'active' : '' }}">
         <i class="nav-icon fas fa-school"></i>
         <p>Profil Sekolah</p>
-    </a>
+    </a> --}}
 
     <a href="{{ route('indexPegawai') }}" class="nav-link {{ Request::is('pegawai') ? 'active' : '' }}">
         <i class="nav-icon fas fa-user-tie"></i>
@@ -35,13 +37,18 @@
         <i class="nav-icon fas fa-users"></i>
         <p>Data Siswa</p>
     </a>
+    
+    <a href="{{ route('indexPesan')  }}" class="nav-link {{ Request::is('pesan') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-envelope"></i>
+        <p>Pesan</p>
+    </a>
 
     <a href="{{ route('uploadGaleri') }}" class="nav-link {{ Request::is('upload-galeri') ? 'active' : '' }}">
         <i class="nav-icon fas fa-images"></i>
         <p>Upload Galeri</p>
     </a>
 
-    <a href="" class="nav-link ">
+    {{-- <a href="" class="nav-link ">
         <i class="nav-icon fas fa-info"></i>
         <p>Upload Berita Acara</p>
     </a>
@@ -49,10 +56,6 @@
     <a href="#" class="nav-link ">
         <i class="nav-icon fas fa-certificate"></i>
         <p>Upload Prestasi</p>
-    </a>
+    </a> --}}
 
-    <a href="" class="nav-link ">
-        <i class="nav-icon fas fa-envelope"></i>
-        <p>Pesan</p>
-    </a>
 </li>

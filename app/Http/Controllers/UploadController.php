@@ -7,6 +7,14 @@ use App\Models\Pesan;
 
 class UploadController extends Controller
 {
+    public function index()
+    {
+        // $pesans=Pesan::all();
+        $pesans=Pesan::simplepaginate(3);
+        return view('pesan',compact(['pesans']));
+        // return view('pesan');
+    }
+
     public function create(){
         return view ('Form_Upload_galeri');
     }
@@ -14,17 +22,19 @@ class UploadController extends Controller
     public function create_pesan(Request $request){
         
         Pesan::create ([
-            'name'=>$request->nama,
+            'nama'=>$request->nama,
             'email'=>$request->email,
-            'phone'=>$request->nomorHp,
-            'pesan'=>$request->message,
-            'id_sekolah'=> 1
+            'no_handphone'=>$request->no_handphone,
+            'pesan'=>$request->pesan,
         ]);
-        // return redirect()->route('Success');
-        return back();
+        // return redirect('/')->with('success','Pesan Anda Telah Terkirim');
+        // return redirect('/');
+        // return back()->with('message','Pesan Anda Telah Terkirim');
+        return back()->with('success','Pesan Anda Telah Terkirim');
+
     }
 
-    public function view_success(){
-        return view ('pesanSuccess');
-    }
+    // public function view_success(){
+    //     return view ('pesanSuccess');
+    // }
 }

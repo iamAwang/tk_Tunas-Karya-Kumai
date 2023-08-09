@@ -36,6 +36,7 @@
                     placeholder="Tanggal Lahir"
                     name="tanggal_lahir_siswa"
                     value="<?php if(@$edit!=null) printf($edit->tanggal_lahir_siswa)?>"
+                    onfocus="this.showPicker()"
                 />
             </div>
             <div class="form-group">
@@ -70,7 +71,14 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Kelas</label>
+                <select class="form-control" name="kelas">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
 
+            {{-- <div class="form-group">
+                <label for="exampleInputPassword1">Kelas</label>
                 <input
                     type="text"
                     class="form-control"
@@ -78,21 +86,21 @@
                     name="kelas"
                     value="<?php if(@$edit!=null) printf($edit->kelas)?>"
                 />
-            </div>
+            </div> --}}
 
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label for="exampleInputPassword1">Wali Kelas</label>
                 <select class="form-control" name="id_pegawai" value="<?php if(@$edit!=null) printf($edit->id_pegawai)?>">
                    
-                    @foreach ($pegawais as $pegawai)
-                        @if (@$edit->pegawai->id == $pegawai->id)
-                    <option value="{{$pegawai->id}}" selected>{{$pegawai->nama_pegawai}}</option>
+                    @foreach ($id_pegawais as $id_pegawai)
+                        @if (@$edit->id_pegawai->id == $id_pegawai->id)
+                    <option value="{{$id_pegawai->id}}" selected>{{$id_pegawai->nama_pegawai}}</option>
                         @else
-                    <option value="{{$pegawai->id}}">{{$pegawai->nama_pegawai}}</option>
+                    <option value="{{$id_pegawai->id}}">{{$id_pegawai->nama_pegawai}}</option>
                         @endif
                     @endforeach
                 </select>
-            </div>
+            </div> --}}
         </div>
 
         <div class="card-footer">

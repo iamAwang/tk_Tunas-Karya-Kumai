@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('nama_orangtua');
             $table->bigInteger('no_handphone_orangtua');
             $table->string('kelas');
-            $table->bigInteger('id_pegawai');
+            // $table->bigInteger('id_pegawai');
             $table->timestamps();
         });
     }

@@ -36,7 +36,7 @@
                     placeholder="Tanggal Lahir"
                     name="tanggal_lahir_pegawai"
                     value="<?php if(@$edit!=null) printf($edit->tanggal_lahir_pegawai)?>"
-                    onfocus="this.ShowPicker()"
+                    onfocus="this.showPicker()"
                 />
             </div>
             <div class="form-group">
@@ -51,30 +51,26 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Jabatan</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Jabatan Pegawai"
-                    name="jabatan"
-                    value="<?php if(@$edit!=null) printf($edit->jabatan)?>"
-                />
-            </div>
-            <div class="form-group">
-            <label for="exampleInputPassword1">Wali kelas</label>
-            <select class="form-control" name="wali kelas" value="">
-                <option value="" selected>B</option>
-                <option value="">A</option>
-            </select>
-            </div>
-            <div class="form-group">
-                <label>Upload Foto</label>
-                <input type="file" name="foto_profil" class="form-control">
+                <select class="form-control" name="id_jabatan" value="">
+                    @foreach ($id_jabatans as $id_jabatan)
+                        @if (@$edit->id_jabatan == $id_jabatan->id)
+                            <option value="{{$id_jabatan->id}}" selected>{{$id_jabatan->nama}}</option>
+                        @else 
+                            <option value="{{$id_jabatan->id}}">{{$id_jabatan->nama}}</option>
+                        @endif
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">
-                <label>Upload Sertifikat</label>
-                <input type="file" name="foto_sertifikat" class="form-control" multiple>
+                <label>Upload Foto</label>
+                <input type="file" name="foto_profil" class="form-control" value=""><?php if(@$edit!=null) printf($edit->foto_profil)?>
             </div>
+
+            {{-- <div class="form-group">
+                <label>Upload Sertifikat</label>
+                <input type="file" name="foto_sertifikat" class="form-control" multiple><?php if(@$edit!=null) printf($edit->foto_sertifikat)?>
+            </div> --}}
         </div>
 
         <div class="card-footer">

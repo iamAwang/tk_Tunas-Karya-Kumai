@@ -3,7 +3,7 @@
     <html>
 
     <head>
-        <style>
+        {{-- <style>
             input {
                 display: none;
                 border: 3px;
@@ -280,12 +280,21 @@
                 justify-content: center;
                 padding: 115px;
             }
-        </style>
+        </style> --}}
     </head>
-
+    
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+    
     <body>
 
-        <div id="container">
+        {{-- <div id="container">
             <form method="post" enctype="multipart/form-data" novalidate="" class="box has-advanced-upload">
                 <div class="box-input">
                     <svg x="0px" y="0px" viewBox="0 0 64 62" style="enable-background:new 0 0 64 62;"
@@ -406,9 +415,9 @@
                 let data = new FormData(form);
                 xhr.send(data);
             }
-        </script>
+        </script> --}}
+
+        <img src="{{asset('photo/Premium.jpg')}}" alt="premium" class="center">
 
     </body>
-
-    </html>
 @endsection

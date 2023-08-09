@@ -15,12 +15,10 @@ return new class extends Migration
     {
         Schema::create('pesans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nama');
             $table->string('email');
-            $table->string('phone');
+            $table->string('no_handphone');
             $table->string('pesan');
-            $table->integer('id_sekolah');
-
             $table->timestamps();
         });
     }

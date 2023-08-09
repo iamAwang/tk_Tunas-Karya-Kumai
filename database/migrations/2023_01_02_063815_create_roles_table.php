@@ -18,6 +18,20 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('roles')->insert(
+            array(
+                'id'=>'1',
+                'name'=>'Developer'
+            )
+        );
+
+        DB::table('roles')->insert(
+            array(
+                'id'=>'2',
+                'name'=>'Admin'
+            )
+        );
     }
 
     /**

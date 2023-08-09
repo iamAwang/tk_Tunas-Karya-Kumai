@@ -19,12 +19,12 @@ return new class extends Migration
             $table->string('tempat_lahir_pegawai');
             $table->date('tanggal_lahir_pegawai');
             $table->string('alamat_pegawai');
-            $table->string('jabatan');
+            $table->bigInteger('id_jabatan');
             $table->string('foto_profil');
-            $table->string('foto_sertifikat');
-            $table->integer('id_sekolah');
+            // $table->string('foto_sertifikat');
             $table->timestamps();
         });
+        
     }
 
     /**
